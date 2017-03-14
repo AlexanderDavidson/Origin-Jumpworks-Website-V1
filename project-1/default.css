@@ -1,0 +1,59 @@
+.row {
+  width: auto;
+}
+
+#baseShips {
+  left: auto;
+  right: auto;
+  padding: 1em;
+}
+
+#threeHundredI {
+  display: inline-block;
+  padding: 1em;
+  background: url(http://i.imgur.com/zDdWO4g.jpg);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  left: auto;
+  right: auto;
+  color: white;
+}
+
+#three15p {
+  display: inline-block;
+  padding: 1em;
+  background: url(http://i.imgur.com/Gw35AJX.jpg);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  left: auto;
+  right: auto;
+  color: white;
+}
+
+#three25a {
+  display: inline-block;
+  padding: 1em;
+  background: url(http://i.imgur.com/YigEDiE.jpg);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  left: auto;
+  right: auto;
+  color: white;
+}
+
+.panel-default {
+  height: calc(40em);
+  width: calc(26.5em);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 1em;
+}
+
+.panel-body {
+  position: absolute;
+  bottom: 0;
+}
