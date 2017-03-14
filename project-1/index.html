@@ -6,8 +6,12 @@
     <link rel="stylesheet" href="Origin1theme.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600">
     <title>Origin Jumpworks - 300 Series</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
   <body>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Base Ships divided in 3 panels with links to more info and add to cart -->
     <div class="container">
       <div class="row" id="baseShips">
@@ -40,36 +44,54 @@
                 your comfort: the 325a can come out on top in any dogfight. The
                 325a features an advanced weapon payload as well as a custom
                 targeting system designed especially for the 325a by WillsOp.</p>
-              <button class="btn btn-default" href="#" role="button">Explore the 325a</button>
+              <button class="btn btn-default" href="#three25aModal" data-toggle="modal">Explore the 325a</button>
+              <!-- Modal for 325a -->
+              <div id="three25aModal" class="modal fade">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      <h4 class="modal-title">325a</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>It’s a dangerous universe out there. Be the arbiter of
+                        your fate with the combat-enhanced ORIGIN 325a. Just
+                        because it’s a rough galaxy doesn’t mean you need to
+                        sacrifice your comfort: the 325a can come out on top in
+                        any dogfight. The 325a features an advanced weapon
+                        payload as well as a custom targeting system designed
+                        especially for the 325a by WillsOp.</p>
+                      <p class="text-warning"><small>If you don't save, your changes will be lost.</small></p>
+                    </div>
+                    <div class="modal-footer">
+                      <!-- put add to cart button -->
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <!-- make button have pop up modal with ifo/pics and add to cart button -->
             </div>
           </div>
         </div>
 
       <!-- 350r using Jumbotron -->
-        <div class="row">
-          <div class="col-xs-12" id="raceShip">
-            <div id="three50r">
-              <div class="description">
-                <h1>350r</h1>
-                <p>The combination of a Gangleri BP 707 Standard powerplant</p>
-                <p>with a 300i fuselage re-engineered to accommodate twin</p>
-                <p>Hammer Propulsion HM 4.3 thrusters makes the 350r the</p>
-                <p>fastest personal craft you’ll ever call your own.</p>
-                <p><a class="btn btn-default btn-lg" href="#" role="button">Learn more</a></p>
-              </div>
+      <div class="row">
+        <div class="col-xs-12" id="raceShip">
+          <div id="three50r">
+            <div class="description">
+              <h1>350r</h1>
+              <p>The combination of a Gangleri BP 707 Standard powerplant</p>
+              <p>with a 300i fuselage re-engineered to accommodate twin</p>
+              <p>Hammer Propulsion HM 4.3 thrusters makes the 350r the</p>
+              <p>fastest personal craft you’ll ever call your own.</p>
+              <p><a class="btn btn-default" href="#">Explore the 350r</a></p>
             </div>
           </div>
         </div>
       </div>
-    <!-- 3D Model file <div class="embed-responsive embed-responsive-16by9 sketchfab-embed-wrapper">
-      <iframe class="embed-responsive-item" width="640" height="480" src="https://sketchfab.com/models/ac1b0d41f1ff40d18bccb0af0e94216f/embed?autospin=0.2" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
-      <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-      <a href="https://sketchfab.com/models/ac1b0d41f1ff40d18bccb0af0e94216f?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Origin 350R</a>
-        by <a href="https://sketchfab.com/starcitizenart?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">starcitizenart</a>
-        on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
-      </p>
-    </div> -->
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
