@@ -1,59 +1,68 @@
-.row {
-  width: auto;
+.container {
+  margin: auto;
+  max-width: 1440px;
 }
 
-#baseShips {
+.row {
   left: auto;
   right: auto;
   padding: 1em;
+  height: calc(42em);
+  width: 100%;
+}
+
+.description {
+  position: absolute;
+  bottom: 0;
+  margin: 0.5em;
 }
 
 #threeHundredI {
   display: inline-block;
-  padding: 1em;
+  height: 100%;
   background: url(http://i.imgur.com/zDdWO4g.jpg);
   background-size: cover;
-  background-position: center;
-  position: absolute;
+  background-position: 20% 50%;
   left: auto;
   right: auto;
   color: white;
+  margin: 0;
 }
 
 #three15p {
   display: inline-block;
-  padding: 1em;
+  height: 100%;
   background: url(http://i.imgur.com/Gw35AJX.jpg);
   background-size: cover;
-  background-position: center;
-  position: absolute;
+  background-position: 49% 50%;
   left: auto;
   right: auto;
   color: white;
+  margin: 0;
 }
 
 #three25a {
   display: inline-block;
-  padding: 1em;
+  height: 100%;
   background: url(http://i.imgur.com/YigEDiE.jpg);
   background-size: cover;
-  background-position: center;
-  position: absolute;
+  background-position: 82% 50%;
   left: auto;
   right: auto;
   color: white;
+  margin: 0;
 }
 
-.panel-default {
-  height: calc(40em);
-  width: calc(26.5em);
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  padding: 1em;
+#three50r {
+  background: url(http://i.imgur.com/gYLaaBj.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: calc(32em);
+  width: 100%;
+  margin: 0;
 }
 
-.panel-body {
-  position: absolute;
-  bottom: 0;
+#raceShip {
+  padding: 0;
 }
