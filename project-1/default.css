@@ -1,17 +1,13 @@
+.container {
+  margin: auto;
+  max-width: 1440px;
+}
+
 .row {
-  width: auto;
-  height: calc(42em);
-}
-
-#baseShips {
-  left: auto;
-  right: auto;
-}
-
-#baseShipsContainer {
   left: auto;
   right: auto;
   padding: 1em;
+  height: calc(42em);
 }
 
 #threeHundredI {
@@ -20,10 +16,10 @@
   background: url(http://i.imgur.com/zDdWO4g.jpg);
   background-size: cover;
   background-position: center;
-  position: absolute;
   left: auto;
   right: auto;
   color: white;
+  margin: 0;
 }
 
 #three15p {
@@ -32,10 +28,10 @@
   background: url(http://i.imgur.com/Gw35AJX.jpg);
   background-size: cover;
   background-position: center;
-  position: absolute;
   left: auto;
   right: auto;
   color: white;
+  margin: 0;
 }
 
 #three25a {
@@ -44,10 +40,10 @@
   background: url(http://i.imgur.com/YigEDiE.jpg);
   background-size: cover;
   background-position: center;
-  position: absolute;
   left: auto;
   right: auto;
   color: white;
+  margin: 0;
 }
 
 #raceShip {
@@ -65,7 +61,6 @@
 .panel-default {
   height: calc(40em);
   width: calc(26.5em);
-  position: fixed;
 }
 
 .panel-body {
@@ -74,6 +69,5 @@
 }
 
 .jumbotron {
-  height: calc(30em);
-  font-size: 14px;
+  height: calc(32em);
 }
