@@ -67,8 +67,11 @@
   padding: 0;
 }
 
-#three25aModal {
-  background: url("../modalWallpaperBlur.jpg");
+#threeHundredIModal,
+#three15pModal,
+#three25aModal,
+#three50rModal {
+  background: rgb(255, 255, 255, 0.4);
   background-size: cover;
 }
 
@@ -84,20 +87,27 @@
   background-color: #555;
 }
 
+/* -------- Mass Tables --------- */
+#threeHundredIMassTable,
+#three15pTable,
 #three25aMassTable {
   color: black;
 }
 
-#three25aVelocity {
+/* --------- Velocity Tables --------- */
+
+#threeHundredIVelocity,
+#three15pVelocity,
+#three25aVelocity,
+#three50rVelocity {
   color: black;
 }
 
-#three25aRotation {
-  color: black;
-}
+/* -------- Rotation Tables --------- */
 
-#three25a3D {
-  display: inline-block;
-  left: 50%;
-  right: 50%;
+#threeHundredIRotation,
+#three15pRotation,
+#three25aRotation,
+#three50rRotation {
+  color: black;
 }
