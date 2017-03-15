@@ -10,8 +10,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
   <body>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Base Ships divided in 3 panels with links to more info and add to cart -->
     <div class="container">
       <div class="row" id="baseShips">
@@ -47,13 +45,176 @@
               <button class="btn btn-default" href="#three25aModal" data-toggle="modal">Explore the 325a</button>
               <!-- Modal for 325a -->
               <div id="three25aModal" class="modal fade">
-                <div class="modal-dialog">
+                <div class="modal-dialog modal-lg">
                   <div class="modal-content">
                     <div class="modal-header">
                       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                      <h4 class="modal-title">325a</h4>
+                      <h1 class="modal-title">325a</h1>
                     </div>
                     <div class="modal-body">
+                      <a class="btn btn-primary" role="button"
+                        data-toggle="collapse" href="#three25aMass"
+                        aria-expanded="false" aria-controls="three25aMass">General Specifications</a>
+                      <div class="collapse" id="three25aMass">
+                        <div class="well">
+                          <table class="table table-hover">
+                            <tbody>
+                              <tr>
+                                <td></td>
+                              </tr>
+                              <tr style="background-color:#333;">
+                                <td>Focus</td>
+                                <td>Interdiction</td>
+                              </tr>
+                              <tr style="background-color:#333;">
+                                <td>Maximum Crew</td>
+                                <td>1</td>
+                              </tr>
+                              <tr style="background-color:#333;">
+                                <td>Mass (empty)</td>
+                                <td>20,085 Kg</td>
+                              </tr>
+                              <tr style="background-color:#555;">
+                                <td>Cargo Capacity</td>
+                                <td>4 Standard Cargo Units</td>
+                              </tr>
+                              <tr style="background-color:#555;">
+                                <td>Length</td>
+                                <td>24 m</td>
+                              </tr>
+                              <tr style="background-color:#555;">
+                                <td>Height</td>
+                                <td>7 m</td>
+                              </tr>
+                              <tr style="background-color:#555;">
+                                <td>Beam</td>
+                                <td>16 m</td>
+                              </tr>
+                              <tr style="background-color:#555;">
+                                <td>Upgrade Capacity</td>
+                                <td>6</td>
+                              </tr>
+                              <tr style="background-color:#555;">
+                                <td>Hull Construction</td>
+                                <td>Metal</td>
+                              </tr>
+                              <tr style="background-color:#777;">
+                                <td>Max Power Plant Size</td>
+                                <td>3</td>
+                              </tr>
+                              <tr style="background-color:#777;">
+                                <td>Factory Power Plant</td>
+                                <td>VHT 2 Plus</td>
+                              </tr>
+                              <tr style="background-color:#777;">
+                                <td>Main Thrusters</td>
+                                <td>1× TR4</td>
+                              </tr>
+                              <tr style="background-color:#777;">
+                                <td>Factory Engine</td>
+                                <td>Hammer Propulsion</td>
+                              </tr>
+                              <tr style="background-color:#777;">
+                                <td>Maneuvering Thrusters</td>
+                                <td>12× TR1</td>
+                              </tr>
+                              <tr style="background-color:#777;">
+                                <td>Factory Maneuvering Thrusters</td>
+                                <td>10× Origin Scalpel Precision</td>
+                              </tr>
+                              <tr style="background-color:#777;">
+                                <td>Factory Maneuvering Thrusters</td>
+                                <td>2× Origin Omni Precision</td>
+                              </tr>
+                              <tr style="background-color:#777;">
+                                <td>Shield</td>
+                                <td>Gorgon Defender ForceWall</td>
+                              </tr>
+                              <tr style="background-color:#a6a6a6;">
+                                <td><b>Hardpoints</b></td>
+                                <td><b>Weapons Systems</b></td>
+                              </tr>
+                              <tr style="background-color:#a6a6a6;">
+                                <td>Class 1</td>
+                                <td>2× Omnisky VI Laser Cannons</td>
+                              </tr>
+                              <tr style="background-color:#a6a6a6;">
+                                <td>Class 2</td>
+                                <td>1× Klaus Werner Mass Driver Cannon</td>
+                              </tr>
+                              <tr style="background-color:#a6a6a6;">
+                                <td>Class 3</td>
+                                <td>2x2 Talon Stalker IR</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <a class="btn btn-primary" role="button"
+                      data-toggle="collapse" href="#three25aVelocity"
+                      aria-expanded="false" aria-controls="three25aVelocity">
+                        Velocity</a>
+                      <div class="collapse" id="three25aVelocity">
+                        <div class="well">
+                          <table class="table table-hover">
+                            <tbody>
+                              <tr>
+                                <td>V Precicion</td>
+                                <td>50.0m/s</td>
+                              </tr>
+                              <tr>
+                                <td>V SCM (Sub-Cruise Mode)</td>
+                                <td>210.0m/s</td>
+                              </tr>
+                              <tr>
+                                <td>V Boost</td>
+                                <td>630.0m/s</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <a class="btn btn-primary" role="button"
+                      data-toggle="collapse" href="#three25aRotation"
+                      aria-expanded="false" aria-controls="three25aRotation">
+                        Rotational Potential</a>
+                      <div class="collapse" id="three25aRotation">
+                        <div class="well">
+                          <table class="table table-hover">
+                            <tbody>
+                              <tr>
+                                <td>Max Speed Pitch</td>
+                                <td>75.0°/s</td>
+                              </tr>
+                              <tr>
+                                <td>Max Speed Yaw</td>
+                                <td>75.0°/s</td>
+                              </tr>
+                              <tr>
+                                <td>Max Speed Roll</td>
+                                <td>85.0°/s</td>
+                              </tr>
+                              <tr>
+                                <td>Max Acceleration Pitch</td>
+                                <td>950°/s²</td>
+                              </tr>
+                              <tr>
+                                <td>Max Acceleration Yaw</td>
+                                <td>50°/s²</td>
+                              </tr>
+                              <tr>
+                                <td>Max Acceleration Roll</td>
+                                <td>950°/s²</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="sketchfab-embed-wrapper"><iframe id="three25a3D" width="868" height="487" src="https://sketchfab.com/models/2d050f5296e24debba9436958d1e4921/embed?autospin=0.2&amp;autostart=1&amp;preload=1;transparent=1;ui_general_controls=0&amp;ui_settings=0&amp;ui_help=0&amp;ui_vr=0&amp;ui_animations=0&amp;ui_annotations=0&amp;ui_infos=0&amp" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+                        <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+                        </p>
+                      </div>
+                      <h3>325a</h3>
                       <p>It’s a dangerous universe out there. Be the arbiter of
                         your fate with the combat-enhanced ORIGIN 325a. Just
                         because it’s a rough galaxy doesn’t mean you need to
@@ -61,12 +222,23 @@
                         any dogfight. The 325a features an advanced weapon
                         payload as well as a custom targeting system designed
                         especially for the 325a by WillsOp.</p>
-                      <p class="text-warning"><small>If you don't save, your changes will be lost.</small></p>
+                      <h3>Standard Equiptment</h3>
+                      <ul>
+                        <li>Omnisky Laser Cannons</li>
+                        <li>Gorgon Defender ForceWall</li>
+                        <li>Atlas Pilot's Seat</li>
+                        <li>Berth for long range cruising</li>
+                        <li>Reinforced Armor Plating</li>
+                        <li>Brushed Metal Hull</li>
+                        <li>Retractable landing gear for smooth atmospheric flight</li>
+                        <li>TRID (Tactile Response Illuminated Dashboard)</li>
+                      </ul>
+                      <p class="text-warning"><small>Supply may be limited due to high demand</small></p>
                     </div>
                     <div class="modal-footer">
                       <!-- put add to cart button -->
+                      <button type="button" class="btn btn-primary" id="three25aCart">ADD TO CART</button>
                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
                   </div>
                 </div>

@@ -66,3 +66,38 @@
 #raceShip {
   padding: 0;
 }
+
+#three25aModal {
+  background: url("../modalWallpaperBlur.jpg");
+  background-size: cover;
+}
+
+.modal-body {
+  background-color: #333;
+}
+
+.modal-header {
+  background-color: #555;
+}
+
+.modal-footer {
+  background-color: #555;
+}
+
+#three25aMassTable {
+  color: black;
+}
+
+#three25aVelocity {
+  color: black;
+}
+
+#three25aRotation {
+  color: black;
+}
+
+#three25a3D {
+  display: inline-block;
+  left: 50%;
+  right: 50%;
+}
