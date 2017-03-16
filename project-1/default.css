@@ -66,3 +66,48 @@
 #raceShip {
   padding: 0;
 }
+
+#threeHundredIModal,
+#three15pModal,
+#three25aModal,
+#three50rModal {
+  background: rgb(255, 255, 255, 0.9);
+  background-size: cover;
+}
+
+.modal-body {
+  background-color: #333;
+}
+
+.modal-header {
+  background-color: #555;
+}
+
+.modal-footer {
+  background-color: #555;
+}
+
+/* -------- Mass Tables --------- */
+#threeHundredIMassTable,
+#three15pTable,
+#three25aMassTable {
+  color: black;
+}
+
+/* --------- Velocity Tables --------- */
+
+#threeHundredIVelocity,
+#three15pVelocity,
+#three25aVelocity,
+#three50rVelocity {
+  color: black;
+}
+
+/* -------- Rotation Tables --------- */
+
+#threeHundredIRotation,
+#three15pRotation,
+#three25aRotation,
+#three50rRotation {
+  color: black;
+}
