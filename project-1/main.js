@@ -221,13 +221,44 @@ function baseShipsCol (arrayOfShips) {
     $col.classList.add ('col-xs-4')
     $col.id = arrayOfShips[i].id
 
+    document.querySelector('#baseShips').appendChild($col)
   }
-  document.querySelector('#baseShips').appendChild($col)
+}
+
+function raceShipCol (arrayOfShips) {
+  for (var i = 0; i < arrayOfShips.length; i++) {
+    var $col = document.createElement('div')
+    var $description = document.createElement('div')
+    var $name = document.createElement('h2')
+    var $flavorText = document.createElement('p')
+    var $exploreButton = document.createElement('button')
+
+    $col.classList.add ('col-xs-12')
+    $col.id = arrayOfShips[i].id
+    $description.classList.add ('description')
+
+    $name.textContent = arrayOfShips.name
+    $flavorText.textContent = arrayOfShips.flavorText
+    $exploreButton.textContent = arrayOfShips.buttonExplore
+
+    document.querySelector('#raceShip').appendChild($col)
+
+    $name.appendChild($description)
+    $flavorText.appendChild($name)
+    $exploreButton.appendChild($flavorText)
+    document.querySelector('#three50r').appendChild($description)
+  }
 }
 
 
+// On Page load functions
 
-window.onload=baseShipsCol(baseShips)
+function start() {
+  baseShipsCol(baseShips)
+  raceShipCol(raceShip)
+
+}
+window.onload=start()
 
 
 /* other method of ship adding
