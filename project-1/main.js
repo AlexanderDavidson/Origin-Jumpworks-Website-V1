@@ -37,7 +37,7 @@ var baseShips = [
     maxAccelRoll: 950,
     modalFlavorTitle: 'DISTINCT LUXURY',
     modalFlavorText: 'The 300i touring model is the premiere spacecraft hull on the market today. A true jack-of-all-trades, the 300i is capable of making any role its own and doing so with the class and sophistication expected of an ORIGIN design. All models feature Gorgon Defender shields and A&amp;R Omnisky VI cannon standard.',
-  }
+  },
   {
     name: '315p',
     role: 'Exploration',
@@ -74,7 +74,7 @@ var baseShips = [
     maxAccelRoll: 950, //950°/s²
     modalFlavorTitle: 'BEYOND DISCOVERY',
     modalFlavorText: 'Exploration is man’s highest calling. Prepare to chart distant horizons with man’s most sophisticated piece of technology, the ORIGIN 315p. Featuring a more robust power plant and a custom scanning package, exclusively designed by Chimera Communications, the 315p is designed for the pilot who wants to go further, to see things that few have seen.',
-  }
+  },
   {
     name: '325a',
     role: 'Interdiction',
@@ -111,7 +111,7 @@ var baseShips = [
     maxAccelRoll: 950, //950°/s²
     modalFlavorTitle: 'UNEQUALLED STRENGTH',
     modalFlavorText: 'It’s a dangerous universe out there. Be the arbiter of your fate with the combat-enhanced ORIGIN 325a. Just because it’s a rough galaxy doesn’t mean you need to sacrifice your comfort: the 325a can come out on top in any dogfight. The 325a features an advanced weapon payload as well as a custom targeting system designed especially for the 325a by WillsOp.'
-  }
+  },
 ]
 
 var raceShip = [
@@ -174,7 +174,7 @@ var link = document.createElement('a')
 
 
 
-// Bootstrap Variables
+/* Bootstrap Variables
 var container = document.createElement('div')
 row.classList.add ('container')
 
@@ -207,7 +207,7 @@ row.classList.add ('btn btn-danger')
 
 var tableHvr = document.createElement('table')
 row.classList.add ('table table-hover')
-
+*/
 
 
 // add base ships
@@ -215,18 +215,22 @@ row.classList.add ('table table-hover')
 
 var baseShipsRow = document.getElementById('baseShips')
 
-function baseShipsCol (arrayOfShips, $parent) {
+function baseShipsCol (arrayOfShips) {
   for (var i = 0; i < arrayOfShips.length; i++) {
-    var $baseShipName = arrayOfShips[i].name
-
     var $col = document.createElement('div')
     $col.classList.add ('col-xs-4')
     $col.id = arrayOfShips[i].id
-    document.appendChild($col)
-  }
 
+  }
+  document.querySelector('#baseShips').appendChild($col)
 }
 
+
+
+window.onload=baseShipsCol(baseShips)
+
+
+/* other method of ship adding
 function renderBaseShipsCol(ship) {
 
   var $ship = document.createElement('div')
@@ -245,12 +249,7 @@ function renderBaseShipsCol(ship) {
 
   return $ship
 }
-
-
-
-
-
-
+*/
 
 
 
