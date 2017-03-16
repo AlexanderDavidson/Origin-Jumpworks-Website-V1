@@ -236,17 +236,29 @@ function raceShipCol (arrayOfShips) {
     $col.classList.add ('col-xs-12')
     $col.id = arrayOfShips[i].id
     $description.classList.add ('description')
+    $name.classList.add ('shipName')
+    $name.id = arrayOfShips[i].name
+    $flavorText.classList.add ('flavorText')
+    $exploreButton.classList.add ('btn', 'btn-default')
 
-    $name.textContent = arrayOfShips.name
-    $flavorText.textContent = arrayOfShips.flavorText
-    $exploreButton.textContent = arrayOfShips.buttonExplore
+    $name.textContent = arrayOfShips[i].name
+    $flavorText.textContent = arrayOfShips[i].flavorText
+    $exploreButton.textContent = arrayOfShips[i].buttonExplore
 
     document.querySelector('#raceShip').appendChild($col)
 
-    $name.appendChild($description)
-    $flavorText.appendChild($name)
-    $exploreButton.appendChild($flavorText)
-    document.querySelector('#three50r').appendChild($description)
+    document.querySelector('.col-xs-12').appendChild($description)
+
+    document.querySelector('.description').appendChild($name)
+
+    document.querySelector('.description').appendChild($flavorText)
+
+    document.querySelector('.description').appendChild($exploreButton)
+
+
+
+    /*$flavorText.appendChild($name)
+    $exploreButton.appendChild($flavorText) */
   }
 }
 
