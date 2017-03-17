@@ -8,7 +8,8 @@ var baseShips = [
     buttonExplore: 'Explore the 300i',
     id: 'threeHundredI',
     shipBg: 'http://i.imgur.com/zDdWO4g.jpg',
-    vidEmbed: 'https://www.youtube.com/embed/JrQ0qMRZ_1Q',
+    vidEmbed: 'https://www.youtube.com/embed/JrQ0qMRZ_1Q?autoplay=1',
+    sketchFab: 'https://sketchfab.com/models/504663144d53469199baa53f5b934cd1/embed?autospin=0.2&amp;autostart=1&amp;preload=1;transparent=1;ui_general_controls=0&amp;ui_settings=0&amp;ui_help=0&amp;ui_vr=0&amp;ui_animations=0&amp;ui_annotations=0&amp;ui_infos=0&amp',
     maxCrew: 1,
     mass: 20085,
     cargo: 4,
@@ -46,7 +47,8 @@ var baseShips = [
     buttonExplore: 'Explore the 315p',
     id: 'three15p',
     shipBg: 'http://i.imgur.com/Gw35AJX.jpg',
-    vidEmbed: 'https://www.youtube.com/embed/lzlNuCJ0NqE',
+    vidEmbed: 'https://www.youtube.com/embed/lzlNuCJ0NqE?autoplay=1',
+    sketchFab: 'https://sketchfab.com/models/48328d2b7e9c454a88da91f4b0d81311/embed?autospin=0.2&amp;autostart=1&amp;preload=1;transparent=1;ui_general_controls=0&amp;ui_settings=0&amp;ui_help=0&amp;ui_vr=0&amp;ui_animations=0&amp;ui_annotations=0&amp;ui_infos=0&amp',
     maxCrew: 1,
     mass: 20085,
     cargo: 6,
@@ -84,7 +86,8 @@ var baseShips = [
     buttonExplore: 'Explore the 325a',
     id: 'three25a',
     shipBg: 'http://i.imgur.com/YigEDiE.jpg',
-    vidEmbed: 'https://www.youtube.com/embed/OvIuzXmkTDY',
+    vidEmbed: 'https://www.youtube.com/embed/OvIuzXmkTDY?autoplay=1',
+    sketchFab: 'https://sketchfab.com/models/2d050f5296e24debba9436958d1e4921/embed?autospin=0.2&amp;autostart=1&amp;preload=1;transparent=1;ui_general_controls=0&amp;ui_settings=0&amp;ui_help=0&amp;ui_vr=0&amp;ui_animations=0&amp;ui_annotations=0&amp;ui_infos=0&amp',
     maxCrew: 1,
     mass: 20085,
     cargo: 4,
@@ -122,7 +125,8 @@ var baseShips = [
     buttonExplore: 'Explore the 325a',
     id: 'three50r',
     shipBg: 'http://i.imgur.com/gYLaaBj.jpg',
-    vidEmbed: 'https://www.youtube.com/embed/fYjD1wiTBmM',
+    vidEmbed: 'https://www.youtube.com/embed/fYjD1wiTBmM?autoplay=1',
+    sketchFab: 'https://sketchfab.com/models/ac1b0d41f1ff40d18bccb0af0e94216f/embed?autospin=0.2&amp;autostart=1&amp;preload=1;transparent=1;ui_general_controls=0&amp;ui_settings=0&amp;ui_help=0&amp;ui_vr=0&amp;ui_animations=0&amp;ui_annotations=0&amp;ui_infos=0&amp',
     maxCrew: 1,
     mass: 20085,
     cargo: 0,
@@ -215,6 +219,7 @@ function renderShipDetails(ship) {
 
 
   var $modalFlavorTitle = document.createElement('h2')
+  var $sketchFab = document.createElement('iframe')
   var $description = document.createElement('p')
 
   var $addToCart = document.createElement('button')
@@ -224,15 +229,25 @@ function renderShipDetails(ship) {
   $heading.classList.add('panel-heading')
   $name.classList.add('panel-title')
   $name.textContent = ship.name
+  $modalFlavorTitle.textContent = ship.modalFlavorTitle
   // ------ Video Embed ----
   $vid.classList.add('panel-body', 'embed-responsive', 'embed-responsive-16by9')
   $vidEmbed.setAttribute('src', ship.vidEmbed)
+  $vidEmbed.setAttribute('modestbranding', 0)
   $vidEmbed.classList.add('embed-responsive-item')
 // -----Body-----
   $body.classList.add('panel-body')
-  $description.textContent = ship.modalFlavorText
 
-  $addToCart.classList.add('btn', 'btn-default')
+  $sketchFab.setAttribute('width', 400)
+  $sketchFab.setAttribute('height', 220)
+  $sketchFab.classList.add('sketchFab')
+  $sketchFab.setAttribute('src', ship.sketchFab)
+  $sketchFab.classList.add('frameborder', 0)
+
+  $description.textContent = ship.modalFlavorText
+  $description.classList.add('description')
+
+  $addToCart.classList.add('btn', 'btn-default', 'cartButton')
   $addToCart.textContent = 'Add to Cart'
   $addToCart.setAttribute('href', '#')
 
@@ -240,7 +255,9 @@ function renderShipDetails(ship) {
   $ship.appendChild($panel)
   $panel.appendChild($heading)
   $heading.appendChild($name)
+  $body.appendChild($modalFlavorTitle)
   $body.appendChild($description)
+  $body.appendChild($sketchFab)
   $body.appendChild($addToCart)
 
   $panel.appendChild($vid)
