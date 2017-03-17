@@ -253,10 +253,18 @@ function renderShipDetails(ship) {
 }
 
 
-function findShip(ships, shipId) {
-  for (var i = 0; i < ships.length; i++) {
-    if (ships[i].id === shipId) {
-      return ships[i]
+function findBaseShip(baseShips, shipId) {
+  for (var i = 0; i < baseShips.length; i++) {
+    if (baseShips[i].id === shipId) {
+      return baseShips[i]
+    }
+  }
+}
+
+function findRaceShip(raceShip, shipId) {
+  for (var i = 0; i < raceShip.length; i++) {
+    if (raceShip[i].id === shipId) {
+      return raceShip[i]
     }
   }
 }
@@ -288,7 +296,8 @@ document.addEventListener('DOMContentLoaded', function() {
   $raceShip.appendChild($ship)
 
   var $views = document.querySelector('#views')
-  var $shipList = document.querySelector('#ship-list')
+  var $home = document.querySelector('nav a') //link to navbar
+  var $shipList = document.querySelector('.ship-list')
   var $shipDetails = document.querySelector('#ship-details')
 
   $shipList.addEventListener('click', function (event) {
@@ -296,10 +305,25 @@ document.addEventListener('DOMContentLoaded', function() {
       return
     }
     var shipId = event.target.getAttribute('data-ship-id')
-    var ship = findShip(ships, shipId)
+    var ship = findBaseShip(baseShips, shipId)
     showView($views, 'ship-details')
     $shipDetails.innerHTML = ''
     $shipDetails.appendChild(renderShipDetails(ship))
+  })
+
+  $shipList.addEventListener('click', function (event) {
+    if (event.target.tagName !== 'BUTTON') {
+      return
+    }
+    var shipId = event.target.getAttribute('data-ship-id')
+    var ship = findRaceShip(raceShip, shipId)  //not defined?
+    showView($views, 'ship-details')
+    $shipDetails.innerHTML = ''
+    $shipDetails.appendChild(renderShipDetails(ship))
+  })
+
+  $home.addEventListener('click', function (event) {
+    showView($views, 'item-list')
   })
 
 })
