@@ -11,6 +11,10 @@
   width: 100%;
 }
 
+.hidden {
+  display: none;
+}
+
 .descriptionBase {
   position: absolute;
   bottom: 0;
@@ -21,6 +25,10 @@
   position: absolute;
   bottom: 0;
   margin: 0.5em;
+}
+
+.featured {
+  width: 30%;
 }
 
 #threeHundredI {

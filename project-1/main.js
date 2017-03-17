@@ -1,4 +1,4 @@
-// Ship Variables
+// ----- Ship Variables -----
 
 var baseShips = [
   {
@@ -8,6 +8,7 @@ var baseShips = [
     buttonExplore: 'Explore the 300i',
     id: 'threeHundredI',
     shipBg: 'http://i.imgur.com/zDdWO4g.jpg',
+    vidEmbed: 'https://www.youtube.com/embed/JrQ0qMRZ_1Q',
     maxCrew: 1,
     mass: 20085,
     cargo: 4,
@@ -45,6 +46,7 @@ var baseShips = [
     buttonExplore: 'Explore the 315p',
     id: 'three15p',
     shipBg: 'http://i.imgur.com/Gw35AJX.jpg',
+    vidEmbed: 'https://www.youtube.com/embed/lzlNuCJ0NqE',
     maxCrew: 1,
     mass: 20085,
     cargo: 6,
@@ -82,6 +84,7 @@ var baseShips = [
     buttonExplore: 'Explore the 325a',
     id: 'three25a',
     shipBg: 'http://i.imgur.com/YigEDiE.jpg',
+    vidEmbed: 'https://www.youtube.com/embed/OvIuzXmkTDY',
     maxCrew: 1,
     mass: 20085,
     cargo: 4,
@@ -122,6 +125,7 @@ var raceShip = [
     buttonExplore: 'Explore the 325a',
     id: 'three50r',
     shipBg: 'http://i.imgur.com/gYLaaBj.jpg',
+    vidEmbed: 'https://www.youtube.com/embed/fYjD1wiTBmM',
     maxCrew: 1,
     mass: 20085,
     cargo: 0,
@@ -154,212 +158,148 @@ var raceShip = [
   }
 ]
 
+// ------- ADD SHIPS -------
 
-
-$('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').focus()
-})
-
-// Regular HTML Elements
-
-var div = document.createElement('div')
-
-var h1 = document.createElement('h1')
-var h2 = document.createElement('h2')
-var h3 = document.createElement('h3')
-var h4 = document.createElement('h4')
-var h5 = document.createElement('h5')
-
-var link = document.createElement('a')
-
-
-
-/* Bootstrap Variables
-var container = document.createElement('div')
-row.classList.add ('container')
-
-var row = document.createElement('div')
-row.classList.add ('row')
-
-var col4 = document.createElement('div')
-col.classList.add ('col-xs-4')
-
-var col12 = document.createElement('div')
-col.classList.add ('col-xs-12')
-
-var buttonDefault = document.createElement('button')
-row.classList.add ('btn btn-default')
-
-var buttonPrimary = document.createElement('button')
-row.classList.add ('btn btn-primary')
-
-var buttonSuccess = document.createElement('button')
-row.classList.add ('btn btn-success')
-
-var buttonInfo = document.createElement('button')
-row.classList.add ('btn btn-info')
-
-var buttonWarning = document.createElement('button')
-row.classList.add ('btn btn-warning')
-
-var buttonDanger = document.createElement('button')
-row.classList.add ('btn btn-danger')
-
-var tableHvr = document.createElement('table')
-row.classList.add ('table table-hover')
-*/
-
-
-// add base ships
-
-
-var baseShipsRow = document.getElementById('baseShips')
-
-function baseShipsCol (arrayOfShips) {
-  for (var i = 0; i < arrayOfShips.length; i++) {
-    var $col = document.createElement('div')
-    var $descriptionBase = document.createElement('div')
-    var $name = document.createElement('h2')
-    var $flavorText = document.createElement('p')
-    var $exploreButton = document.createElement('button')
-
-    $col.classList.add ('col-xs-4')
-    $col.id = arrayOfShips[i].id
-    $descriptionBase.classList.add ('descriptionBase')
-    $name.classList.add ('shipName')
-    $name.id = arrayOfShips[i].name
-    $flavorText.classList.add ('flavorText')
-    $exploreButton.classList.add ('btn', 'btn-default')
-
-    $name.textContent = arrayOfShips[i].name
-    $flavorText.textContent = arrayOfShips[i].flavorText
-    $exploreButton.textContent = arrayOfShips[i].buttonExplore
-
-    document.querySelector('#baseShips').appendChild($col)
-
-    document.querySelector('.col-xs-4').appendChild($descriptionBase)
-
-    document.querySelector('.descriptionBase').appendChild($name)
-
-    document.querySelector('.descriptionBase').appendChild($flavorText)
-
-    document.querySelector('.descriptionBase').appendChild($exploreButton)
-  }
-}
-
-function raceShipCol (arrayOfShips) {
-  for (var i = 0; i < arrayOfShips.length; i++) {
-    var $col = document.createElement('div')
-    var $descriptionRace = document.createElement('div')
-    var $name = document.createElement('h2')
-    var $flavorText = document.createElement('p')
-    var $exploreButton = document.createElement('button')
-
-    $col.classList.add ('col-xs-12')
-    $col.id = arrayOfShips[i].id
-    $descriptionRace.classList.add ('descriptionRace')
-    $name.classList.add ('shipName')
-    $name.id = arrayOfShips[i].name
-    $flavorText.classList.add ('flavorText')
-    $exploreButton.classList.add ('btn', 'btn-default')
-
-    $name.textContent = arrayOfShips[i].name
-    $flavorText.textContent = arrayOfShips[i].flavorText
-    $exploreButton.textContent = arrayOfShips[i].buttonExplore
-
-    document.querySelector('#raceShip').appendChild($col)
-
-    document.querySelector('.col-xs-12').appendChild($descriptionRace)
-
-    document.querySelector('.descriptionRace').appendChild($name)
-
-    document.querySelector('.descriptionRace').appendChild($flavorText)
-
-    document.querySelector('.descriptionRace').appendChild($exploreButton)
-
-
-
-    /*$flavorText.appendChild($name)
-    $exploreButton.appendChild($flavorText) */
-  }
-}
-
-
-// On Page load functions
-
-function start() {
-  baseShipsCol(baseShips)
-  raceShipCol(raceShip)
-
-}
-window.onload=start()
-
-
-/* other method of ship adding
-function renderBaseShipsCol(ship) {
-
-  var $ship = document.createElement('div')
+function baseShip(ship, size) {
+  var $col = document.createElement('div')
+  var $descriptionBase = document.createElement('div')
   var $name = document.createElement('h2')
   var $flavorText = document.createElement('p')
   var $exploreButton = document.createElement('button')
 
-  $ship.classList.add('col-xs-4')
-  $ship.id = ship[i].id
-  $name.textContent = baseShips.name
-  $exploreButton.textContent = baseShips.buttonExplore
+  $col.classList.add('col-xs-' + size)
+  $col.id = ship.id
+  $descriptionBase.classList.add('descriptionBase')
 
-  $ship.appendChild($name)
-  $name.appendChild($flavorText)
-  $flavorText.appendChild(exploreButton)
+  if (size === 12) {
+    $descriptionBase.classList.add('featured')
+  }
+
+  $name.classList.add('shipName')
+  $name.id = ship.name
+  $flavorText.classList.add('flavorText')
+  $exploreButton.classList.add('btn', 'btn-default')
+  $exploreButton.setAttribute('data-ship-id', ship.id)
+
+  $name.textContent = ship.name
+  $flavorText.textContent = ship.flavorText
+  $exploreButton.textContent = ship.buttonExplore
+
+  $col.appendChild($descriptionBase)
+  $descriptionBase.appendChild($name)
+  $descriptionBase.appendChild($flavorText)
+  $descriptionBase.appendChild($exploreButton)
+
+  return $col
+}
+
+
+
+// ----- Explore Button Modal/Column -----
+
+
+// $('#myModal').on('shown.bs.modal', function () {
+//   $('#myInput').focus()
+// })
+
+function renderShipDetails(ship) {
+
+  var $ship = document.createElement('div')
+  var $panel = document.createElement('div')
+  var $heading = document.createElement('div')
+  var $name = document.createElement('h1')
+
+  var $body = document.createElement('div')
+
+  var $vid = document.createElement('div')
+  var $vidEmbed = document.createElement('iframe')
+
+
+  var $modalFlavorTitle = document.createElement('h2')
+  var $description = document.createElement('p')
+
+  var $addToCart = document.createElement('button')
+
+  $ship.classList.add('col-xs-12')
+  $panel.classList.add('panel', 'panel-primary')
+  $heading.classList.add('panel-heading')
+  $name.classList.add('panel-title')
+  $name.textContent = ship.name
+  // ------ Video Embed ----
+  $vid.classList.add('panel-body', 'embed-responsive', 'embed-responsive-16by9')
+  $vidEmbed.setAttribute('src', ship.vidEmbed)
+  $vidEmbed.classList.add('embed-responsive-item')
+// -----Body-----
+  $body.classList.add('panel-body')
+  $description.textContent = ship.modalFlavorText
+
+  $addToCart.classList.add('btn', 'btn-default')
+  $addToCart.textContent = 'Add to Cart'
+  $addToCart.setAttribute('href', '#')
+
+// ----- Appends -----
+  $ship.appendChild($panel)
+  $panel.appendChild($heading)
+  $heading.appendChild($name)
+  $body.appendChild($description)
+  $body.appendChild($addToCart)
+
+  $panel.appendChild($vid)
+  $vid.appendChild($vidEmbed)
+
+  $panel.appendChild($body)
 
   return $ship
 }
-*/
 
 
-
-
-/*  event listeners
-document.getElementById("myBtn").addEventListener("click", function(){
-    document.getElementById("demo").innerHTML = "Hello World";
-});
-
-
-$details.addEventListener('click', function() {
-  if (event.target.tagName !== 'button') {
-    return
-  }
-* /
-})
-
-/*  add to cart function
-
-$cartAdd.addEventListener('click', function() {
-  if (event.target.tagName !== 'button') {
-    return
-  }
-  app.cart.quantity += 1  //create car var
-  $cartCount.textContent  app.cart.quantity
-  var itemID = event.target.getAttribute ('data-item-id')
-  var item = findItem
-})
-
-function findItem (item, itemId){
-  for (var i=0; i < ; i ++){
-    var item = items[i]
-    if (item.id.toString() === itemId){
-      return item
+function findShip(ships, shipId) {
+  for (var i = 0; i < ships.length; i++) {
+    if (ships[i].id === shipId) {
+      return ships[i]
     }
   }
 }
-*/
+
+function showView($views, viewId) {
+  for (var i = 0; i < $views.children.length; i++) {
+    var $view = $views.children[i]
+    if ($view.id === viewId) {
+      $view.classList.remove('hidden')
+    }
+    else {
+      $view.classList.add('hidden')
+    }
+  }
+}
 
 
-/* <div class="col-xs-4" id="threeHundredI">
-    <div class="description">
-      <h2 >300i</h2>
-      <p>If you’re going to travel the stars… why not do it in style?
-        The 300i is Origin Jumpworks’ premiere luxury spacecraft.
-        It is a sleek, silver killer that sends as much of a message
-        with its silhouette as it does with its weaponry.</p>
-        */
+// ----- EVENT LISTENERS -----
+
+document.addEventListener('DOMContentLoaded', function() {
+  var $baseShips = document.querySelector('#base-ships')
+  baseShips.forEach(function(ship) {
+    var $ship = baseShip(ship, 4)
+    $baseShips.appendChild($ship)
+  })
+
+  var $ship = baseShip(raceShip[0], 12)
+  var $raceShip = document.querySelector('#race-ship')
+  $raceShip.appendChild($ship)
+
+  var $views = document.querySelector('#views')
+  var $shipList = document.querySelector('#ship-list')
+  var $shipDetails = document.querySelector('#ship-details')
+
+  $shipList.addEventListener('click', function (event) {
+    if (event.target.tagName !== 'BUTTON') {
+      return
+    }
+    var shipId = event.target.getAttribute('data-ship-id')
+    var ship = findShip(ships, shipId)
+    showView($views, 'ship-details')
+    $shipDetails.innerHTML = ''
+    $shipDetails.appendChild(renderShipDetails(ship))
+  })
+
+})
