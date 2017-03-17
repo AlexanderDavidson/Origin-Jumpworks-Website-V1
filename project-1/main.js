@@ -218,24 +218,46 @@ var baseShipsRow = document.getElementById('baseShips')
 function baseShipsCol (arrayOfShips) {
   for (var i = 0; i < arrayOfShips.length; i++) {
     var $col = document.createElement('div')
+    var $descriptionBase = document.createElement('div')
+    var $name = document.createElement('h2')
+    var $flavorText = document.createElement('p')
+    var $exploreButton = document.createElement('button')
+
     $col.classList.add ('col-xs-4')
     $col.id = arrayOfShips[i].id
+    $descriptionBase.classList.add ('descriptionBase')
+    $name.classList.add ('shipName')
+    $name.id = arrayOfShips[i].name
+    $flavorText.classList.add ('flavorText')
+    $exploreButton.classList.add ('btn', 'btn-default')
+
+    $name.textContent = arrayOfShips[i].name
+    $flavorText.textContent = arrayOfShips[i].flavorText
+    $exploreButton.textContent = arrayOfShips[i].buttonExplore
 
     document.querySelector('#baseShips').appendChild($col)
+
+    document.querySelector('.col-xs-4').appendChild($descriptionBase)
+
+    document.querySelector('.descriptionBase').appendChild($name)
+
+    document.querySelector('.descriptionBase').appendChild($flavorText)
+
+    document.querySelector('.descriptionBase').appendChild($exploreButton)
   }
 }
 
 function raceShipCol (arrayOfShips) {
   for (var i = 0; i < arrayOfShips.length; i++) {
     var $col = document.createElement('div')
-    var $description = document.createElement('div')
+    var $descriptionRace = document.createElement('div')
     var $name = document.createElement('h2')
     var $flavorText = document.createElement('p')
     var $exploreButton = document.createElement('button')
 
     $col.classList.add ('col-xs-12')
     $col.id = arrayOfShips[i].id
-    $description.classList.add ('description')
+    $descriptionRace.classList.add ('descriptionRace')
     $name.classList.add ('shipName')
     $name.id = arrayOfShips[i].name
     $flavorText.classList.add ('flavorText')
@@ -247,13 +269,13 @@ function raceShipCol (arrayOfShips) {
 
     document.querySelector('#raceShip').appendChild($col)
 
-    document.querySelector('.col-xs-12').appendChild($description)
+    document.querySelector('.col-xs-12').appendChild($descriptionRace)
 
-    document.querySelector('.description').appendChild($name)
+    document.querySelector('.descriptionRace').appendChild($name)
 
-    document.querySelector('.description').appendChild($flavorText)
+    document.querySelector('.descriptionRace').appendChild($flavorText)
 
-    document.querySelector('.description').appendChild($exploreButton)
+    document.querySelector('.descriptionRace').appendChild($exploreButton)
 
 
 

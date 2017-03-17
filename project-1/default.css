@@ -11,7 +11,13 @@
   width: 100%;
 }
 
-.description {
+.descriptionBase {
+  position: absolute;
+  bottom: 0;
+  margin: 0.5em;
+}
+
+.descriptionRace {
   position: absolute;
   bottom: 0;
   margin: 0.5em;
