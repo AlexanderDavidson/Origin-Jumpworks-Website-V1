@@ -115,9 +115,6 @@ var baseShips = [
     modalFlavorTitle: 'UNEQUALLED STRENGTH',
     modalFlavorText: 'It’s a dangerous universe out there. Be the arbiter of your fate with the combat-enhanced ORIGIN 325a. Just because it’s a rough galaxy doesn’t mean you need to sacrifice your comfort: the 325a can come out on top in any dogfight. The 325a features an advanced weapon payload as well as a custom targeting system designed especially for the 325a by WillsOp.'
   },
-]
-
-var raceShip = [
   {
     name: '350r',
     role: 'Racing',
@@ -155,8 +152,10 @@ var raceShip = [
     maxAccelRoll: 950, //950°/s²
     modalFlavorTitle: 'PURE SPEED',
     modalFlavorText: 'Since the dawn of civilization, Humans have striven to build faster machines. Now, ORIGIN presents the culmination of that effort: the ORIGIN 350r. The combination of a Gangleri BP 707 Standard powerplant with a 300i fuselate re-engineered to ac- commodate twin Hammer Propulsion HM 4.3 thrusters makes the 350r the fastest personal craft you’ll ever call your own.'
-  }
+  },
 ]
+
+
 
 // ------- ADD SHIPS -------
 
@@ -171,7 +170,7 @@ function baseShip(ship, size) {
   $col.id = ship.id
   $descriptionBase.classList.add('descriptionBase')
 
-  if (size === 12) {
+  if (ship.name === '350r') {
     $descriptionBase.classList.add('featured')
   }
 
@@ -291,10 +290,6 @@ document.addEventListener('DOMContentLoaded', function() {
     $baseShips.appendChild($ship)
   })
 
-  var $ship = baseShip(raceShip[0], 12)
-  var $raceShip = document.querySelector('#race-ship')
-  $raceShip.appendChild($ship)
-
   var $views = document.querySelector('#views')
   var $home = document.querySelector('nav a') //link to navbar
   var $shipList = document.querySelector('.ship-list')
@@ -311,16 +306,6 @@ document.addEventListener('DOMContentLoaded', function() {
     $shipDetails.appendChild(renderShipDetails(ship))
   })
 
-  $shipList.addEventListener('click', function (event) {
-    if (event.target.tagName !== 'BUTTON') {
-      return
-    }
-    var shipId = event.target.getAttribute('data-ship-id')
-    var ship = findRaceShip(raceShip, shipId)  //not defined?
-    showView($views, 'ship-details')
-    $shipDetails.innerHTML = ''
-    $shipDetails.appendChild(renderShipDetails(ship))
-  })
 
   $home.addEventListener('click', function (event) {
     showView($views, 'item-list')
