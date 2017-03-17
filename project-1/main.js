@@ -325,7 +325,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   $home.addEventListener('click', function (event) {
-    showView($views, 'item-list')
+    showView($views, 'base-ships')
   })
 
 })
