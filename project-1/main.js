@@ -50,7 +50,7 @@ var baseShips = [
     shipBg: 'http://i.imgur.com/Gw35AJX.jpg',
     vidEmbed: 'https://www.youtube.com/embed/lzlNuCJ0NqE?autoplay=1',
     sketchFab: 'https://sketchfab.com/models/48328d2b7e9c454a88da91f4b0d81311/embed?autospin=0.2&amp;autostart=1&amp;preload=1;transparent=1;ui_general_controls=0&amp;ui_settings=0&amp;ui_help=0&amp;ui_vr=0&amp;ui_animations=0&amp;ui_annotations=0&amp;ui_infos=0&amp',
-    threeDfileLocal: '../project-1/assets/ORIGIN-315p3.obj',
+    threeDfileLocal: '../project-1/assets/ORIGIN-315P3.obj',
     maxCrew: 1,
     mass: 20085,
     cargo: 6,
@@ -90,7 +90,7 @@ var baseShips = [
     shipBg: 'http://i.imgur.com/YigEDiE.jpg',
     vidEmbed: 'https://www.youtube.com/embed/OvIuzXmkTDY?autoplay=1',
     sketchFab: 'https://sketchfab.com/models/2d050f5296e24debba9436958d1e4921/embed?autospin=0.2&amp;autostart=1&amp;preload=1;transparent=1;ui_general_controls=0&amp;ui_settings=0&amp;ui_help=0&amp;ui_vr=0&amp;ui_animations=0&amp;ui_annotations=0&amp;ui_infos=0&amp',
-    threeDfileLocal: '../project-1/assets/ORIGIN-325a3.obj',
+    threeDfileLocal: '../project-1/assets/ORIGIN-325A3.obj',
     maxCrew: 1,
     mass: 20085,
     cargo: 4,
@@ -130,7 +130,7 @@ var baseShips = [
     shipBg: 'http://i.imgur.com/gYLaaBj.jpg',
     vidEmbed: 'https://www.youtube.com/embed/fYjD1wiTBmM?autoplay=1',
     sketchFab: 'https://sketchfab.com/models/ac1b0d41f1ff40d18bccb0af0e94216f/embed?autospin=0.2&amp;autostart=1&amp;preload=1;transparent=1;ui_general_controls=0&amp;ui_settings=0&amp;ui_help=0&amp;ui_vr=0&amp;ui_animations=0&amp;ui_annotations=0&amp;ui_infos=0&amp',
-    threeDfileLocal: '../project-1/assets/ORIGIN-350r3.obj',
+    threeDfileLocal: '../project-1/assets/ORIGIN-350R3.obj',
     maxCrew: 1,
     mass: 20085,
     cargo: 0,
@@ -255,7 +255,9 @@ function renderShipDetails(ship) {
   // $sketchFab.classList.add('frameborder', 0)
 
   // for material - $aframeEntity.setAttribute('obj-model', )
+  $aframeAsset.setAttribute('style', 'height: 320px; width: 100%')
   $aframeAsset.setAttribute('src', ship.threeDfileLocal)
+  $aframeAsset.setAttribute('material', 'shader: flat; color: red; metalness: 0')
 
   $description.textContent = ship.modalFlavorText
   $description.classList.add('description')
