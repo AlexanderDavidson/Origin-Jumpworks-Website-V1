@@ -229,10 +229,13 @@ function renderShipDetails(ship) {
   var $modalFlavorTitle = document.createElement('h2')
   // var $sketchFab = document.createElement('iframe')
   var $description = document.createElement('p')
+  var $infoCol = document.createElement('div')
+  var $threeDCol = document.createElement('div')
 
   var $aframe =  document.createElement('a-scene')
   var $aframeAsset = document.createElement('a-obj-model')
   var $aframeLight = document.createElement('a-light')
+  var $aframeCam = document.createElement('a-entity')
   // for material -- var $aframeEntity = document.createElement('a-entity')
 
   var $addToCart = document.createElement('button')
@@ -251,6 +254,10 @@ function renderShipDetails(ship) {
   $vidEmbed.classList.add('embed-responsive-item')
 // -----Body-----
   $body.classList.add('panel-body')
+  $infoCol.classList.add('col-xs-6')
+  $threeDCol.classList.add('col-xs-6')
+  $threeDCol.id = 'myEmbeddedScene'
+
 
   // $sketchFab.setAttribute('width', 400)
   // $sketchFab.setAttribute('height', 220)
@@ -260,16 +267,19 @@ function renderShipDetails(ship) {
 
   // for material - $aframeEntity.setAttribute('obj-model', )
   $aframeAsset.id = ship.threeDid
-  $aframe.setAttribute('embedded')
-  $aframe.setAttribute('style', 'height: 320px; width: 100%')
-  $aframe.classList.remove('fullscreen')
+  $aframe.setAttribute('embedded', 'true')
+  $aframe.setAttribute('style', 'height: 500px; width: 100%')
+  //$aframe.classList.remove('fullscreen')
   $aframeAsset.setAttribute('src', ship.threeDfileLocal)
-  $aframeAsset.setAttribute('material', 'color: red')
-  $aframeAsset.setAttribute('position', '0 2 -5')
-  $aframeAsset.setAttribute('rotation', '0 45 45')
-  $aframeAsset.setAttribute('scale', '0.01 0.01 0.01')
+  $aframeAsset.setAttribute('material', 'color: white')
+  $aframeAsset.setAttribute('position', '0 1.25 -1')
+  $aframeAsset.setAttribute('rotation', '0 45 0')
+  $aframeAsset.setAttribute('scale', 'true')
+  $aframeAsset.setAttribute('visible', 'true')
   $aframeLight.setAttribute('type', 'ambient')
   $aframeLight.setAttribute('color', '#445451')
+  $aframeCam.setAttribute('camera', 'userHeight: 1.6')
+  $aframeCam.setAttribute('look-controls', 'true')
 
   $description.textContent = ship.modalFlavorText
   $description.classList.add('description')
@@ -283,10 +293,14 @@ function renderShipDetails(ship) {
   $panel.appendChild($heading)
   $heading.appendChild($name)
   $body.appendChild($modalFlavorTitle)
-  $body.appendChild($description)
+  $body.appendChild($infoCol)
+  $body.appendChild($threeDCol)
+
+  $infoCol.appendChild($description)
   // $body.appendChild($sketchFab)
-  $body.appendChild($aframe)
-  $aframe.appendChild($aframeAsset)
+  $threeDCol.appendChild($aframe)
+  $aframe.appendChild($aframeCam)
+  $aframeCam.appendChild($aframeAsset)
   $aframe.appendChild($aframeLight)
   $body.appendChild($addToCart)
 
