@@ -234,8 +234,10 @@ function renderShipDetails(ship) {
 
   var $aframe =  document.createElement('a-scene')
   var $aframeAsset = document.createElement('a-obj-model')
+  //var $aframeTestAsset = document.createElement('a-obj-model')
   var $aframeLight = document.createElement('a-light')
   var $aframeCam = document.createElement('a-entity')
+  var $aframeTurntable = document.createElement('a-animation')
   // for material -- var $aframeEntity = document.createElement('a-entity')
 
   var $addToCart = document.createElement('button')
@@ -268,18 +270,31 @@ function renderShipDetails(ship) {
   // for material - $aframeEntity.setAttribute('obj-model', )
   $aframeAsset.id = ship.threeDid
   $aframe.setAttribute('embedded', 'true')
-  $aframe.setAttribute('style', 'height: 500px; width: 100%')
-  //$aframe.classList.remove('fullscreen')
+  $aframe.setAttribute('style', 'height: 200px; width: 100%')
+  $aframe.classList.add('aFrameScene')
   $aframeAsset.setAttribute('src', ship.threeDfileLocal)
-  $aframeAsset.setAttribute('material', 'color: white')
-  $aframeAsset.setAttribute('position', '0 1.25 -1')
-  $aframeAsset.setAttribute('rotation', '0 45 0')
-  $aframeAsset.setAttribute('scale', 'true')
+  $aframeAsset.setAttribute('material', 'offset: [object Object]; repeat: [object Object]; ambientOcclusionTextureOffset: [object Object]; ambientOcclusionTextureRepeat: [object Object]; color: rgb(255,255,255); displacementTextureOffset: [object Object]; displacementTextureRepeat: [object Object]; envMap: #reflection; metalness: 0.5; normalScale: [object Object]; normalTextureOffset: [object Object]; normalTextureRepeat: [object Object]; roughness: 0.25')
+  $aframeAsset.setAttribute('position', '0 1 -10')
+  $aframeAsset.setAttribute('rotation', '0 135 30')
+  $aframeAsset.setAttribute('scale', '0.007 0.007 0.007')
   $aframeAsset.setAttribute('visible', 'true')
+  // $aframeAsset.setAttribute('src', ship.threeDfileLocal)
+  // $aframeAsset.setAttribute('material', 'material="offset: [object Object]; repeat: [object Object]; ambientOcclusionTextureOffset: [object Object]; ambientOcclusionTextureRepeat: [object Object]; color: rgb(255,255,255); displacementTextureOffset: [object Object]; displacementTextureRepeat: [object Object]; envMap: #reflection; metalness: 0.5; normalScale: [object Object]; normalTextureOffset: [object Object]; normalTextureRepeat: [object Object]; roughness: 0.25')
+  // $aframeAsset.setAttribute('position', '0 1.25 -1')
+  // $aframeAsset.setAttribute('rotation', '0 135 30')
+  // $aframeAsset.setAttribute('scale', '0.001 0.001 0.001')
+  // $aframeAsset.setAttribute('visible', 'true')
   $aframeLight.setAttribute('type', 'ambient')
-  $aframeLight.setAttribute('color', '#445451')
-  $aframeCam.setAttribute('camera', 'userHeight: 1.6')
+  $aframeLight.setAttribute('color', 'white')
+  
+  $aframeCam.setAttribute('zoom', '1')
   $aframeCam.setAttribute('look-controls', 'true')
+  $aframeTurntable.setAttribute('easing', 'linear')
+  $aframeTurntable.setAttribute('attribute', 'rotation')
+  $aframeTurntable.setAttribute('dur', '10000')
+  $aframeTurntable.setAttribute('fill', 'forwards')
+  $aframeTurntable.setAttribute('to', '0 360 0')
+  $aframeTurntable.setAttribute('repeat', 'indefinite')
 
   $description.textContent = ship.modalFlavorText
   $description.classList.add('description')
@@ -300,7 +315,9 @@ function renderShipDetails(ship) {
   // $body.appendChild($sketchFab)
   $threeDCol.appendChild($aframe)
   $aframe.appendChild($aframeCam)
-  $aframeCam.appendChild($aframeAsset)
+  //$aframeCam.appendChild($aframeAsset)
+  $aframe.appendChild($aframeAsset)
+  $aframeAsset.appendChild($aframeTurntable)
   $aframe.appendChild($aframeLight)
   $body.appendChild($addToCart)
 
@@ -341,6 +358,9 @@ function showView($views, viewId) {
   }
 }
 
+function clearViews () {
+  document.getElementById('ship-details').innerHTML = ""
+}
 // ----- EVENT LISTENERS -----
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -369,5 +389,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   $home.addEventListener('click', function (event) {
     showView($views, 'base-ships')
+    clearViews()
   })
 })
