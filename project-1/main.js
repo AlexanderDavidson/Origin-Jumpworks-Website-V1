@@ -8,9 +8,10 @@ var baseShips = [
     buttonExplore: 'Explore the 300i',
     id: 'threeHundredI',
     shipBg: 'http://i.imgur.com/zDdWO4g.jpg',
-    vidEmbed: 'https://www.youtube.com/embed/JrQ0qMRZ_1Q?autoplay=1',
-    sketchFab: 'https://sketchfab.com/models/504663144d53469199baa53f5b934cd1/embed?autospin=0.2&amp;autostart=1&amp;preload=1;transparent=1;ui_general_controls=0&amp;ui_settings=0&amp;ui_help=0&amp;ui_vr=0&amp;ui_animations=0&amp;ui_annotations=0&amp;ui_infos=0&amp',
+    vidEmbed: 'https://www.youtube.com/embed/JrQ0qMRZ_1Q?autoplay=1&controls=0&disablekb=1&enablejsapi=1&fs=0&modestbranding=1&rel=0&showinfo=0',
+    sketchFab: 'https://sketchfab.com/models/504663144d53469199baa53f5b934cd1/embed?autospin=0.2&amp;autostart=1&amp;preload=1;transparent=1;controls=0&amp;ui_settings=0&amp;ui_help=0&amp;ui_vr=0&amp;ui_animations=0&amp;ui_annotations=0&amp;ui_infos=0&amp',
     threeDfileLocal: '../project-1/assets/ORIGIN-300i3.obj',
+    threeDid: 'threeHundredI-obj',
     maxCrew: 1,
     mass: 20085,
     cargo: 4,
@@ -48,9 +49,10 @@ var baseShips = [
     buttonExplore: 'Explore the 315p',
     id: 'three15p',
     shipBg: 'http://i.imgur.com/Gw35AJX.jpg',
-    vidEmbed: 'https://www.youtube.com/embed/lzlNuCJ0NqE?autoplay=1',
+    vidEmbed: 'https://www.youtube.com/embed/lzlNuCJ0NqE?autoplay=1&controls=0&disablekb=1&enablejsapi=1&fs=0&modestbranding=1&rel=0&showinfo=0',
     sketchFab: 'https://sketchfab.com/models/48328d2b7e9c454a88da91f4b0d81311/embed?autospin=0.2&amp;autostart=1&amp;preload=1;transparent=1;ui_general_controls=0&amp;ui_settings=0&amp;ui_help=0&amp;ui_vr=0&amp;ui_animations=0&amp;ui_annotations=0&amp;ui_infos=0&amp',
     threeDfileLocal: '../project-1/assets/ORIGIN-315P3.obj',
+    threeDid: 'three15p-obj',
     maxCrew: 1,
     mass: 20085,
     cargo: 6,
@@ -88,9 +90,10 @@ var baseShips = [
     buttonExplore: 'Explore the 325a',
     id: 'three25a',
     shipBg: 'http://i.imgur.com/YigEDiE.jpg',
-    vidEmbed: 'https://www.youtube.com/embed/OvIuzXmkTDY?autoplay=1',
+    vidEmbed: 'https://www.youtube.com/embed/OvIuzXmkTDY?autoplay=1&controls=0&disablekb=1&enablejsapi=1&fs=0&modestbranding=1&rel=0&showinfo=0',
     sketchFab: 'https://sketchfab.com/models/2d050f5296e24debba9436958d1e4921/embed?autospin=0.2&amp;autostart=1&amp;preload=1;transparent=1;ui_general_controls=0&amp;ui_settings=0&amp;ui_help=0&amp;ui_vr=0&amp;ui_animations=0&amp;ui_annotations=0&amp;ui_infos=0&amp',
     threeDfileLocal: '../project-1/assets/ORIGIN-325A3.obj',
+    threeDid: 'three25a-obj',
     maxCrew: 1,
     mass: 20085,
     cargo: 4,
@@ -128,9 +131,10 @@ var baseShips = [
     buttonExplore: 'Explore the 325a',
     id: 'three50r',
     shipBg: 'http://i.imgur.com/gYLaaBj.jpg',
-    vidEmbed: 'https://www.youtube.com/embed/fYjD1wiTBmM?autoplay=1',
+    vidEmbed: 'https://www.youtube.com/embed/fYjD1wiTBmM?autoplay=1&controls=0&disablekb=1&enablejsapi=1&fs=0&modestbranding=1&rel=0&showinfo=0',
     sketchFab: 'https://sketchfab.com/models/ac1b0d41f1ff40d18bccb0af0e94216f/embed?autospin=0.2&amp;autostart=1&amp;preload=1;transparent=1;ui_general_controls=0&amp;ui_settings=0&amp;ui_help=0&amp;ui_vr=0&amp;ui_animations=0&amp;ui_annotations=0&amp;ui_infos=0&amp',
-    threeDfileLocal: '../project-1/assets/ORIGIN-350R3.obj',
+    threeDfileLocal: 'https://ucarecdn.com/cd931c37-65c4-4e87-aadb-6131f26131e4/',
+    threeDid: 'three50r-obj',
     maxCrew: 1,
     mass: 20085,
     cargo: 0,
@@ -227,7 +231,8 @@ function renderShipDetails(ship) {
   var $description = document.createElement('p')
 
   var $aframe =  document.createElement('a-scene')
-  var $aframeAsset = document.createElement('a-asset-item')
+  var $aframeAsset = document.createElement('a-obj-model')
+  var $aframeLight = document.createElement('a-light')
   // for material -- var $aframeEntity = document.createElement('a-entity')
 
   var $addToCart = document.createElement('button')
@@ -243,7 +248,6 @@ function renderShipDetails(ship) {
   // ------ Video Embed ----
   $vid.classList.add('panel-body', 'embed-responsive', 'embed-responsive-16by9')
   $vidEmbed.setAttribute('src', ship.vidEmbed)
-  $vidEmbed.setAttribute('modestbranding', 0)
   $vidEmbed.classList.add('embed-responsive-item')
 // -----Body-----
   $body.classList.add('panel-body')
@@ -255,9 +259,17 @@ function renderShipDetails(ship) {
   // $sketchFab.classList.add('frameborder', 0)
 
   // for material - $aframeEntity.setAttribute('obj-model', )
-  $aframeAsset.setAttribute('style', 'height: 320px; width: 100%')
+  $aframeAsset.id = ship.threeDid
+  $aframe.setAttribute('embedded')
+  $aframe.setAttribute('style', 'height: 320px; width: 100%')
+  $aframe.classList.remove('fullscreen')
   $aframeAsset.setAttribute('src', ship.threeDfileLocal)
-  $aframeAsset.setAttribute('material', 'shader: flat; color: red; metalness: 0')
+  $aframeAsset.setAttribute('material', 'color: red')
+  $aframeAsset.setAttribute('position', '0 2 -5')
+  $aframeAsset.setAttribute('rotation', '0 45 45')
+  $aframeAsset.setAttribute('scale', '0.01 0.01 0.01')
+  $aframeLight.setAttribute('type', 'ambient')
+  $aframeLight.setAttribute('color', '#445451')
 
   $description.textContent = ship.modalFlavorText
   $description.classList.add('description')
@@ -275,6 +287,7 @@ function renderShipDetails(ship) {
   // $body.appendChild($sketchFab)
   $body.appendChild($aframe)
   $aframe.appendChild($aframeAsset)
+  $aframe.appendChild($aframeLight)
   $body.appendChild($addToCart)
 
   $panel.appendChild($vid)
@@ -343,5 +356,4 @@ document.addEventListener('DOMContentLoaded', function() {
   $home.addEventListener('click', function (event) {
     showView($views, 'base-ships')
   })
-
 })
