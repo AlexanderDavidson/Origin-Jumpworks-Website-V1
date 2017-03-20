@@ -10,7 +10,7 @@ var baseShips = [
     shipBg: 'http://i.imgur.com/zDdWO4g.jpg',
     vidEmbed: 'https://www.youtube.com/embed/JrQ0qMRZ_1Q?autoplay=1',
     sketchFab: 'https://sketchfab.com/models/504663144d53469199baa53f5b934cd1/embed?autospin=0.2&amp;autostart=1&amp;preload=1;transparent=1;ui_general_controls=0&amp;ui_settings=0&amp;ui_help=0&amp;ui_vr=0&amp;ui_animations=0&amp;ui_annotations=0&amp;ui_infos=0&amp',
-    threeDfileLocal: '../assets/ORIGIN-300i3.obj',
+    threeDfileLocal: '../project-1/assets/ORIGIN-300i3.obj',
     maxCrew: 1,
     mass: 20085,
     cargo: 4,
@@ -50,7 +50,7 @@ var baseShips = [
     shipBg: 'http://i.imgur.com/Gw35AJX.jpg',
     vidEmbed: 'https://www.youtube.com/embed/lzlNuCJ0NqE?autoplay=1',
     sketchFab: 'https://sketchfab.com/models/48328d2b7e9c454a88da91f4b0d81311/embed?autospin=0.2&amp;autostart=1&amp;preload=1;transparent=1;ui_general_controls=0&amp;ui_settings=0&amp;ui_help=0&amp;ui_vr=0&amp;ui_animations=0&amp;ui_annotations=0&amp;ui_infos=0&amp',
-    threeDfileLocal: '../assets/ORIGIN-315p3.obj',
+    threeDfileLocal: '../project-1/assets/ORIGIN-315p3.obj',
     maxCrew: 1,
     mass: 20085,
     cargo: 6,
@@ -90,7 +90,7 @@ var baseShips = [
     shipBg: 'http://i.imgur.com/YigEDiE.jpg',
     vidEmbed: 'https://www.youtube.com/embed/OvIuzXmkTDY?autoplay=1',
     sketchFab: 'https://sketchfab.com/models/2d050f5296e24debba9436958d1e4921/embed?autospin=0.2&amp;autostart=1&amp;preload=1;transparent=1;ui_general_controls=0&amp;ui_settings=0&amp;ui_help=0&amp;ui_vr=0&amp;ui_animations=0&amp;ui_annotations=0&amp;ui_infos=0&amp',
-    threeDfileLocal: '../assets/ORIGIN-325a3.obj',
+    threeDfileLocal: '../project-1/assets/ORIGIN-325a3.obj',
     maxCrew: 1,
     mass: 20085,
     cargo: 4,
@@ -130,7 +130,7 @@ var baseShips = [
     shipBg: 'http://i.imgur.com/gYLaaBj.jpg',
     vidEmbed: 'https://www.youtube.com/embed/fYjD1wiTBmM?autoplay=1',
     sketchFab: 'https://sketchfab.com/models/ac1b0d41f1ff40d18bccb0af0e94216f/embed?autospin=0.2&amp;autostart=1&amp;preload=1;transparent=1;ui_general_controls=0&amp;ui_settings=0&amp;ui_help=0&amp;ui_vr=0&amp;ui_animations=0&amp;ui_annotations=0&amp;ui_infos=0&amp',
-    threeDfileLocal: '../assets/ORIGIN-350r3.obj',
+    threeDfileLocal: '../project-1/assets/ORIGIN-350r3.obj',
     maxCrew: 1,
     mass: 20085,
     cargo: 0,
@@ -162,13 +162,6 @@ var baseShips = [
     modalFlavorText: 'Since the dawn of civilization, Humans have striven to build faster machines. Now, ORIGIN presents the culmination of that effort: the ORIGIN 350r. The combination of a Gangleri BP 707 Standard powerplant with a 300i fuselate re-engineered to ac- commodate twin Hammer Propulsion HM 4.3 thrusters makes the 350r the fastest personal craft you’ll ever call your own.'
   },
 ]
-
-// ----- 3js -----
-
-var scene, camera, renderer;
-
-  init();
-  animate();
 
 
 
@@ -230,72 +223,15 @@ function renderShipDetails(ship) {
 
 
   var $modalFlavorTitle = document.createElement('h2')
-  var $sketchFab = document.createElement('iframe')
+  // var $sketchFab = document.createElement('iframe')
   var $description = document.createElement('p')
 
+  var $aframe =  document.createElement('a-scene')
+  var $aframeAsset = document.createElement('a-asset-item')
+  // for material -- var $aframeEntity = document.createElement('a-entity')
+
   var $addToCart = document.createElement('button')
-/*
-  // ----- 3d -----
 
-  // Sets up the scene.
-  function init(ship) {
-
-    // Create the scene and set the scene size.
-    scene = new THREE.Scene();
-    var WIDTH = window.innerWidth,
-        HEIGHT = window.innerHeight;
-
-    // Create a renderer and add it to the DOM.
-    renderer = new THREE.WebGLRenderer({antialias:true});
-    renderer.setSize(WIDTH, HEIGHT);
-    document.body.appendChild(renderer.domElement);
-
-    // Create a camera, zoom it out from the model a bit, and add it to the scene.
-    camera = new THREE.PerspectiveCamera(45, WIDTH / HEIGHT, 0.1, 20000);
-    camera.position.set(0,6,0);
-    scene.add(camera);
-
-    // Create an event listener that resizes the renderer with the browser window.
-    window.addEventListener('resize', function() {
-      var WIDTH = window.innerWidth,
-         HEIGHT = window.innerHeight;
-      renderer.setSize(WIDTH, HEIGHT);
-      camera.aspect = WIDTH / HEIGHT;
-      camera.updateProjectionMatrix();
-    });
-
-    // Set the background color of the scene.
-    renderer.setClearColorHex(0x333F47, 1);
-
-    // Create a light, set its position, and add it to the scene.
-    var light = new THREE.PointLight(0xffffff);
-    light.position.set(-100,200,100);
-    scene.add(light);
-
-    // Load in the mesh and add it to the scene.
-    var loader = new THREE.OBJLoader();
-    loader.load( ship.threeDfileLocal, function(geometry){
-      var material = new THREE.MeshLambertMaterial({color: 0x55B663});
-      mesh = new THREE.Mesh(geometry, material);
-      scene.add(mesh);
-    });
-
-    // Add OrbitControls so that we can pan around with the mouse.
-   //controls = new THREE.OrbitControls(camera, renderer.domElement);
-  }
-
-  // Renders the scene and updates the render as needed.
-  function animate() {
-
-   // Read more about requestAnimationFrame at http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/
-    requestAnimationFrame(animate);
-
-   // Render the scene.
-    renderer.render(scene, camera);
-    controls.update();
-
- }
-*/
   //----- classes & attributes -----
 
   $ship.classList.add('col-xs-12')
@@ -312,11 +248,14 @@ function renderShipDetails(ship) {
 // -----Body-----
   $body.classList.add('panel-body')
 
-  $sketchFab.setAttribute('width', 400)
-  $sketchFab.setAttribute('height', 220)
-  $sketchFab.classList.add('sketchFab')
-  $sketchFab.setAttribute('src', ship.sketchFab)
-  $sketchFab.classList.add('frameborder', 0)
+  // $sketchFab.setAttribute('width', 400)
+  // $sketchFab.setAttribute('height', 220)
+  // $sketchFab.classList.add('sketchFab')
+  // $sketchFab.setAttribute('src', ship.sketchFab)
+  // $sketchFab.classList.add('frameborder', 0)
+
+  // for material - $aframeEntity.setAttribute('obj-model', )
+  $aframeAsset.setAttribute('src', ship.threeDfileLocal)
 
   $description.textContent = ship.modalFlavorText
   $description.classList.add('description')
@@ -331,7 +270,9 @@ function renderShipDetails(ship) {
   $heading.appendChild($name)
   $body.appendChild($modalFlavorTitle)
   $body.appendChild($description)
-  $body.appendChild($sketchFab)
+  // $body.appendChild($sketchFab)
+  $body.appendChild($aframe)
+  $aframe.appendChild($aframeAsset)
   $body.appendChild($addToCart)
 
   $panel.appendChild($vid)
@@ -370,7 +311,6 @@ function showView($views, viewId) {
     }
   }
 }
-
 
 // ----- EVENT LISTENERS -----
 
