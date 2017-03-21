@@ -236,7 +236,8 @@ function renderShipDetails(ship) {
   var $aframeAsset = document.createElement('a-obj-model')
   //var $aframeTestAsset = document.createElement('a-obj-model')
   var $aframeLight = document.createElement('a-light')
-  var $aframeDirLight = document.createElement('a-entity')
+  var $aframeDirLight = document.createElement('a-light')
+  var $aframeKeyLight = document.createElement('a-light')
   var $aframeCam = document.createElement('a-entity')
   var $aframeTurntable = document.createElement('a-animation')
   // for material -- var $aframeEntity = document.createElement('a-entity')
@@ -257,11 +258,9 @@ function renderShipDetails(ship) {
   $vidEmbed.classList.add('embed-responsive-item')
 // -----Body-----
   $body.classList.add('panel-body')
-  $infoCol.classList.add('col-xs-6')
-  $threeDCol.classList.add('col-xs-6')
+  $infoCol.classList.add('col-xs-3')
+  $threeDCol.classList.add('col-xs-9')
   $threeDCol.id = 'myEmbeddedScene'
-
-
   // $sketchFab.setAttribute('width', 400)
   // $sketchFab.setAttribute('height', 220)
   // $sketchFab.classList.add('sketchFab')
@@ -271,10 +270,11 @@ function renderShipDetails(ship) {
   // for material - $aframeEntity.setAttribute('obj-model', )
   $aframeAsset.id = ship.threeDid
   $aframe.setAttribute('embedded', 'true')
-  $aframe.setAttribute('style', 'height: 200px; width: 100%')
+  $aframe.setAttribute('style', 'height: 350px; width: 100%')
   $aframe.classList.add('aFrameScene')
+
   $aframeAsset.setAttribute('src', ship.threeDfileLocal)
-  $aframeAsset.setAttribute('material', 'offset: [object Object]; repeat: [object Object]; ambientOcclusionTextureOffset: [object Object]; ambientOcclusionTextureRepeat: [object Object]; color: rgb(255,255,255); displacementTextureOffset: [object Object]; displacementTextureRepeat: [object Object]; envMap: #reflection; metalness: 0.5; normalScale: [object Object]; normalTextureOffset: [object Object]; normalTextureRepeat: [object Object]; roughness: 0.25')
+  $aframeAsset.setAttribute('material', 'side: double; offset: [object Object]; repeat: [object Object]; ambientOcclusionTextureOffset: [object Object]; ambientOcclusionTextureRepeat: [object Object]; color: white; displacementTextureOffset: [object Object]; displacementTextureRepeat: [object Object]; metalness: 0.9; normalScale: [object Object]; normalTextureOffset: [object Object]; normalTextureRepeat: [object Object]; roughness: 0.63')
   $aframeAsset.setAttribute('position', '0 1 -10')
   $aframeAsset.setAttribute('rotation', '0 135 30')
   $aframeAsset.setAttribute('scale', '0.007 0.007 0.007')
@@ -285,18 +285,25 @@ function renderShipDetails(ship) {
   // $aframeAsset.setAttribute('rotation', '0 135 30')
   // $aframeAsset.setAttribute('scale', '0.001 0.001 0.001')
   // $aframeAsset.setAttribute('visible', 'true')
-  $aframeLight.setAttribute('type', 'ambient')
-  $aframeLight.setAttribute('color', 'white')
-  $aframeDirLight.setAttribute('type', 'directional')
-  $aframeDirLight.setAttribute('color', '#fff')
-  $aframeDirLight.setAttribute('intensity', '0.6')
-  $aframeDirLight.setAttribute('position', '-0.5 1 1')
+  $aframeLight.id = 'firstLight'
+  $aframeLight.setAttribute('light', 'color: #00a0ff')
+  $aframeLight.setAttribute('position', '13 3 -44')
 
+  $aframeDirLight.id = 'directionalLight'
+  $aframeDirLight.setAttribute('light', 'color: #5fffce; intensity: 0.6')
+  $aframeDirLight.setAttribute('position', '-15 -1 -38')
+
+  $aframeKeyLight.id = 'keyLight'
+  $aframeKeyLight.setAttribute('light', 'color: #c1c0c1; decay: 0.07999999999999996; intensity: 0.64; penumbra: 0.56; type: point')
+  $aframeKeyLight.setAttribute('position', '3.5 7 -5')
+
+  $aframeCam.id = 'camera'
   $aframeCam.setAttribute('zoom', '0')
-  $aframeCam.setAttribute('look-controls', 'true')
+  $aframeCam.setAttribute('camera', 'active: true; fov: 20; near: 0.01')
+  $aframeCam.setAttribute('position', '0 0 15')
   $aframeTurntable.setAttribute('easing', 'linear')
   $aframeTurntable.setAttribute('attribute', 'rotation')
-  $aframeTurntable.setAttribute('dur', '10000')
+  $aframeTurntable.setAttribute('dur', '50000')
   $aframeTurntable.setAttribute('fill', 'forwards')
   $aframeTurntable.setAttribute('to', '0 360 0')
   $aframeTurntable.setAttribute('repeat', 'indefinite')
@@ -309,6 +316,7 @@ function renderShipDetails(ship) {
   $addToCart.setAttribute('href', '#')
 
 // ----- Appends -----
+
   $ship.appendChild($panel)
   $panel.appendChild($heading)
   $heading.appendChild($name)
@@ -325,6 +333,7 @@ function renderShipDetails(ship) {
   $aframeAsset.appendChild($aframeTurntable)
   $aframe.appendChild($aframeLight)
   $aframe.appendChild($aframeDirLight)
+  $aframe.appendChild($aframeKeyLight)
   $body.appendChild($addToCart)
 
   $panel.appendChild($vid)
@@ -398,3 +407,19 @@ document.addEventListener('DOMContentLoaded', function() {
     clearViews()
   })
 })
+
+
+/* camera attributes
+camera="active: false; fov: 40; near: 0.01"
+camera="active: false; near: 0.01"
+*/
+
+/* ----- ship 3d attributes
+material="side: double; offset: [object Object]; repeat: [object Object]; ambientOcclusionTextureOffset: [object Object]; ambientOcclusionTextureRepeat: [object Object]; color: white; displacementTextureOffset: [object Object]; displacementTextureRepeat: [object Object]; metalness: 0.9; normalScale: [object Object]; normalTextureOffset: [object Object]; normalTextureRepeat: [object Object]; roughness: 0.63"
+*/
+
+/* ---- light attributes
+key light -- light="color: #c1c0c1; decay: 0.07999999999999996; intensity: 0.64; penumbra: 0.56; type: point"   position='3.5 7 -5'
+directional -- light="color: #5fffce; intensity: 0.6"   position='-15 -1 -38'
+first light -- light="color: #00a0ff"  position='13 3 -44'
+*/

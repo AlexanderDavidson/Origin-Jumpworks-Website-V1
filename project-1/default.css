@@ -51,6 +51,11 @@
   width: 30%;
 }
 
+#threeDAsset {
+  position: absolute;
+  bottom: 2;
+}
+
 #threeHundredI {
   display: inline-block;
   height: 100%;
