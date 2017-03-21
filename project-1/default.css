@@ -140,6 +140,9 @@
   background-color: #555;
 }
 
+.nav-tabs {
+  background-color: white;
+}
 /* -------- Mass Tables --------- */
 #threeHundredIMassTable,
 #three15pTable,
@@ -163,4 +166,10 @@
 #three25aRotation,
 #three50rRotation {
   color: black;
+}
+
+/* for customized bootstrap html {
+  font-family: 'Josefin Sans', sans-serif;sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }

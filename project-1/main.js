@@ -71,7 +71,7 @@ var baseShips = [
     weaponSysC1: '2× A&amp;R Omnisky VI Laser Cannons',
     weaponSysC2: 'Greycat Industrial SureGrip Tractor Beam',
     weaponSysC3: 'N/A',
-    vPrecision: '50.0m/s',
+    vPrecision: 50,
     vSCM: 215,
     vBoost: 700,
     maxSpeedPitch: 65,
@@ -166,9 +166,7 @@ var baseShips = [
     modalFlavorText: 'Since the dawn of civilization, Humans have striven to build faster machines. Now, ORIGIN presents the culmination of that effort: the ORIGIN 350r. The combination of a Gangleri BP 707 Standard powerplant with a 300i fuselate re-engineered to ac- commodate twin Hammer Propulsion HM 4.3 thrusters makes the 350r the fastest personal craft you’ll ever call your own.'
   },
 ]
-// -----Global Variables -----
-var $tr = document.createElement('tr')
-var $td = document.createElement('td')
+
 
 // ------- ADD SHIPS -------
 
@@ -244,43 +242,9 @@ function renderShipDetails(ship) {
   // for material -- var $aframeEntity = document.createElement('a-entity')
 
   var $specs = document.createElement('div')
-  var $specsTable = document.createElement('div')
 
-  var $specsGen = document.createElement('a')
 
-  // function specsGenTableCreator() {
-  //   var table = document.createElement('div');
-  //   var row = table.insertRow(0);
-  //   var cell1 = row.insertCell(0);
-  //   var cell2 = row.insertCell(1);
-  //   cell1.innerHTML = 'Role';
-  //   cell2.innerHTML = ship.Role;
-  //   var cell3 = row.insertCell(0);
-  //   var cell4 = row.insertCell(1);
-  //   cell3.innerHTML = 'Max Crew';
-  //   cell4.innerHTML = ship.maxCrew;
-  //   var cell5 = row.insertCell(0);
-  //   var cell6 = row.insertCell(1);
-  //   cell3.innerHTML = 'Mass';
-  //   cell4.innerHTML = ship.mass;
-  //   var cell7 = row.insertCell(0);
-  //   var cell8 = row.insertCell(1);
-  //   cell3.innerHTML = 'Max Crew';
-  //   cell4.innerHTML = ship.maxCrew;
-
-  // function specsVelTableCreator() {
-  //   var table = document.createElement('div');
-  //   var row = table.insertRow(0);
-  //   var cell1 = row.insertCell(0);
-  //   var cell2 = row.insertCell(1);
-  //   cell1.innerHTML = 'Role';
-  //   cell2.innerHTML = ship.Role;
-  //   var cell3 = row.insertCell(0);
-  //   var cell4 = row.insertCell(1);
-  //   cell3.innerHTML = 'Max Crew';
-  //   cell4.innerHTML = ship.maxCrew;
-
-  var $addToCart = document.createElement('button')
+  // var $addToCart = document.createElement('button')
 
   //----- classes & attributes -----
 
@@ -351,13 +315,12 @@ function renderShipDetails(ship) {
   $description.classList.add('description')
 
   $specs.classList.add('col-xs-12', 'specs')
-  $specsGen.classList.add('btn', 'btn-default', 'specsGen')
-  $specsGen.textContent = 'General Specifications'
-  $specsTable.classList.add('table', 'table-hover')
 
-  $addToCart.classList.add('btn', 'btn-default', 'cartButton')
-  $addToCart.textContent = 'Add to Cart'
-  $addToCart.setAttribute('href', '#')
+
+
+  // $addToCart.classList.add('btn', 'btn-default', 'cartButton')
+  // $addToCart.textContent = 'Add to Cart'
+  // $addToCart.setAttribute('href', '#')
 
 // ----- Appends -----
 
@@ -381,11 +344,13 @@ function renderShipDetails(ship) {
   $aframe.appendChild($aframeLight)
   $aframe.appendChild($aframeDirLight)
   $aframe.appendChild($aframeKeyLight)
-  $body.appendChild($addToCart)
+  // $body.appendChild($addToCart)
 
   $panel.appendChild($body)
+
   $panel.appendChild($specs)
-  $specs.appendChild($specsGen)
+
+
   //$specsGen.appendChild(specsGenTableCreator())
   // $specsGen.appendChild($specsTable)
   // $specsTable.appendChild($tr)
