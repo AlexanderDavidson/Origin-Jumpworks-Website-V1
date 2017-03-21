@@ -51,7 +51,7 @@ var baseShips = [
     shipBg: 'http://i.imgur.com/Gw35AJX.jpg',
     vidEmbed: 'https://www.youtube.com/embed/lzlNuCJ0NqE?autoplay=1&controls=0&disablekb=1&enablejsapi=1&fs=0&modestbranding=1&rel=0&showinfo=0',
     sketchFab: 'https://sketchfab.com/models/48328d2b7e9c454a88da91f4b0d81311/embed?autospin=0.2&amp;autostart=1&amp;preload=1;transparent=1;ui_general_controls=0&amp;ui_settings=0&amp;ui_help=0&amp;ui_vr=0&amp;ui_animations=0&amp;ui_annotations=0&amp;ui_infos=0&amp',
-    threeDfileLocal: '../project-1/assets/ORIGIN-315P3.obj',
+    threeDfileLocal: 'https://ucarecdn.com/b77d3308-7b45-46a0-ab8d-32e284278b18/',
     threeDid: 'three15p-obj',
     maxCrew: 1,
     mass: 20085,
@@ -92,7 +92,7 @@ var baseShips = [
     shipBg: 'http://i.imgur.com/YigEDiE.jpg',
     vidEmbed: 'https://www.youtube.com/embed/OvIuzXmkTDY?autoplay=1&controls=0&disablekb=1&enablejsapi=1&fs=0&modestbranding=1&rel=0&showinfo=0',
     sketchFab: 'https://sketchfab.com/models/2d050f5296e24debba9436958d1e4921/embed?autospin=0.2&amp;autostart=1&amp;preload=1;transparent=1;ui_general_controls=0&amp;ui_settings=0&amp;ui_help=0&amp;ui_vr=0&amp;ui_animations=0&amp;ui_annotations=0&amp;ui_infos=0&amp',
-    threeDfileLocal: '../project-1/assets/ORIGIN-325A3.obj',
+    threeDfileLocal: 'https://ucarecdn.com/033c60f0-80ad-44c5-ae3a-db1d8f08ea12/',
     threeDid: 'three25a-obj',
     maxCrew: 1,
     mass: 20085,
@@ -133,7 +133,7 @@ var baseShips = [
     shipBg: 'http://i.imgur.com/gYLaaBj.jpg',
     vidEmbed: 'https://www.youtube.com/embed/fYjD1wiTBmM?autoplay=1&controls=0&disablekb=1&enablejsapi=1&fs=0&modestbranding=1&rel=0&showinfo=0',
     sketchFab: 'https://sketchfab.com/models/ac1b0d41f1ff40d18bccb0af0e94216f/embed?autospin=0.2&amp;autostart=1&amp;preload=1;transparent=1;ui_general_controls=0&amp;ui_settings=0&amp;ui_help=0&amp;ui_vr=0&amp;ui_animations=0&amp;ui_annotations=0&amp;ui_infos=0&amp',
-    threeDfileLocal: 'https://ucarecdn.com/cd931c37-65c4-4e87-aadb-6131f26131e4/',
+    threeDfileLocal: 'https://ucarecdn.com/e213c706-3b8b-4003-b3f5-fdbaa08d74e1/',
     threeDid: 'three50r-obj',
     maxCrew: 1,
     mass: 20085,
@@ -273,6 +273,7 @@ function renderShipDetails(ship) {
   $aframe.setAttribute('style', 'height: 350px; width: 100%')
   $aframe.classList.add('aFrameScene')
 
+  $aframeAsset.id = 'threeDAsset'
   $aframeAsset.setAttribute('src', ship.threeDfileLocal)
   $aframeAsset.setAttribute('material', 'side: double; offset: [object Object]; repeat: [object Object]; ambientOcclusionTextureOffset: [object Object]; ambientOcclusionTextureRepeat: [object Object]; color: white; displacementTextureOffset: [object Object]; displacementTextureRepeat: [object Object]; metalness: 0.9; normalScale: [object Object]; normalTextureOffset: [object Object]; normalTextureRepeat: [object Object]; roughness: 0.63')
   $aframeAsset.setAttribute('position', '0 1 -10')
