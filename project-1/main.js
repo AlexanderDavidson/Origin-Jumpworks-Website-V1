@@ -10,7 +10,7 @@ var baseShips = [
     shipBg: 'http://i.imgur.com/zDdWO4g.jpg',
     vidEmbed: 'https://www.youtube.com/embed/JrQ0qMRZ_1Q?autoplay=1&controls=0&disablekb=1&enablejsapi=1&fs=0&modestbranding=1&rel=0&showinfo=0',
     sketchFab: 'https://sketchfab.com/models/504663144d53469199baa53f5b934cd1/embed?autospin=0.2&amp;autostart=1&amp;preload=1;transparent=1;controls=0&amp;ui_settings=0&amp;ui_help=0&amp;ui_vr=0&amp;ui_animations=0&amp;ui_annotations=0&amp;ui_infos=0&amp',
-    threeDfileLocal: '../project-1/assets/ORIGIN-300i3.obj',
+    threeDfileLocal: 'https://ucarecdn.com/d326e462-4edf-438c-840a-9559bb62fe3e/',
     threeDid: 'threeHundredI-obj',
     maxCrew: 1,
     mass: 20085,
@@ -236,6 +236,7 @@ function renderShipDetails(ship) {
   var $aframeAsset = document.createElement('a-obj-model')
   //var $aframeTestAsset = document.createElement('a-obj-model')
   var $aframeLight = document.createElement('a-light')
+  var $aframeDirLight = document.createElement('a-entity')
   var $aframeCam = document.createElement('a-entity')
   var $aframeTurntable = document.createElement('a-animation')
   // for material -- var $aframeEntity = document.createElement('a-entity')
@@ -286,8 +287,12 @@ function renderShipDetails(ship) {
   // $aframeAsset.setAttribute('visible', 'true')
   $aframeLight.setAttribute('type', 'ambient')
   $aframeLight.setAttribute('color', 'white')
-  
-  $aframeCam.setAttribute('zoom', '1')
+  $aframeDirLight.setAttribute('type', 'directional')
+  $aframeDirLight.setAttribute('color', '#fff')
+  $aframeDirLight.setAttribute('intensity', '0.6')
+  $aframeDirLight.setAttribute('position', '-0.5 1 1')
+
+  $aframeCam.setAttribute('zoom', '0')
   $aframeCam.setAttribute('look-controls', 'true')
   $aframeTurntable.setAttribute('easing', 'linear')
   $aframeTurntable.setAttribute('attribute', 'rotation')
@@ -319,6 +324,7 @@ function renderShipDetails(ship) {
   $aframe.appendChild($aframeAsset)
   $aframeAsset.appendChild($aframeTurntable)
   $aframe.appendChild($aframeLight)
+  $aframe.appendChild($aframeDirLight)
   $body.appendChild($addToCart)
 
   $panel.appendChild($vid)
