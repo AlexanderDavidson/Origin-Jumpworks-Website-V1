@@ -132,6 +132,10 @@
   filter: progid: dximagetransform.microsoft.gradient(startColorstr='#304251', endColorstr='#0e1d2d', GradientType=0); /* IE6-9 */
 }
 
+.specs {
+  background-color: rgba(48, 66, 81, 1);
+}
+
 .modal-footer {
   background-color: #555;
 }

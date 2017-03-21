@@ -166,8 +166,9 @@ var baseShips = [
     modalFlavorText: 'Since the dawn of civilization, Humans have striven to build faster machines. Now, ORIGIN presents the culmination of that effort: the ORIGIN 350r. The combination of a Gangleri BP 707 Standard powerplant with a 300i fuselate re-engineered to ac- commodate twin Hammer Propulsion HM 4.3 thrusters makes the 350r the fastest personal craft you’ll ever call your own.'
   },
 ]
-
-
+// -----Global Variables -----
+var $tr = document.createElement('tr')
+var $td = document.createElement('td')
 
 // ------- ADD SHIPS -------
 
@@ -242,6 +243,43 @@ function renderShipDetails(ship) {
   var $aframeTurntable = document.createElement('a-animation')
   // for material -- var $aframeEntity = document.createElement('a-entity')
 
+  var $specs = document.createElement('div')
+  var $specsTable = document.createElement('div')
+
+  var $specsGen = document.createElement('a')
+
+  // function specsGenTableCreator() {
+  //   var table = document.createElement('div');
+  //   var row = table.insertRow(0);
+  //   var cell1 = row.insertCell(0);
+  //   var cell2 = row.insertCell(1);
+  //   cell1.innerHTML = 'Role';
+  //   cell2.innerHTML = ship.Role;
+  //   var cell3 = row.insertCell(0);
+  //   var cell4 = row.insertCell(1);
+  //   cell3.innerHTML = 'Max Crew';
+  //   cell4.innerHTML = ship.maxCrew;
+  //   var cell5 = row.insertCell(0);
+  //   var cell6 = row.insertCell(1);
+  //   cell3.innerHTML = 'Mass';
+  //   cell4.innerHTML = ship.mass;
+  //   var cell7 = row.insertCell(0);
+  //   var cell8 = row.insertCell(1);
+  //   cell3.innerHTML = 'Max Crew';
+  //   cell4.innerHTML = ship.maxCrew;
+
+  // function specsVelTableCreator() {
+  //   var table = document.createElement('div');
+  //   var row = table.insertRow(0);
+  //   var cell1 = row.insertCell(0);
+  //   var cell2 = row.insertCell(1);
+  //   cell1.innerHTML = 'Role';
+  //   cell2.innerHTML = ship.Role;
+  //   var cell3 = row.insertCell(0);
+  //   var cell4 = row.insertCell(1);
+  //   cell3.innerHTML = 'Max Crew';
+  //   cell4.innerHTML = ship.maxCrew;
+
   var $addToCart = document.createElement('button')
 
   //----- classes & attributes -----
@@ -304,13 +342,18 @@ function renderShipDetails(ship) {
   $aframeCam.setAttribute('position', '0 0 15')
   $aframeTurntable.setAttribute('easing', 'linear')
   $aframeTurntable.setAttribute('attribute', 'rotation')
-  $aframeTurntable.setAttribute('dur', '50000')
+  $aframeTurntable.setAttribute('dur', '40000')
   $aframeTurntable.setAttribute('fill', 'forwards')
   $aframeTurntable.setAttribute('to', '0 360 0')
   $aframeTurntable.setAttribute('repeat', 'indefinite')
 
   $description.textContent = ship.modalFlavorText
   $description.classList.add('description')
+
+  $specs.classList.add('col-xs-12', 'specs')
+  $specsGen.classList.add('btn', 'btn-default', 'specsGen')
+  $specsGen.textContent = 'General Specifications'
+  $specsTable.classList.add('table', 'table-hover')
 
   $addToCart.classList.add('btn', 'btn-default', 'cartButton')
   $addToCart.textContent = 'Add to Cart'
@@ -321,6 +364,9 @@ function renderShipDetails(ship) {
   $ship.appendChild($panel)
   $panel.appendChild($heading)
   $heading.appendChild($name)
+  $panel.appendChild($vid)
+  $vid.appendChild($vidEmbed)
+
   $body.appendChild($modalFlavorTitle)
   $body.appendChild($infoCol)
   $body.appendChild($threeDCol)
@@ -337,10 +383,16 @@ function renderShipDetails(ship) {
   $aframe.appendChild($aframeKeyLight)
   $body.appendChild($addToCart)
 
-  $panel.appendChild($vid)
-  $vid.appendChild($vidEmbed)
-
   $panel.appendChild($body)
+  $panel.appendChild($specs)
+  $specs.appendChild($specsGen)
+  //$specsGen.appendChild(specsGenTableCreator())
+  // $specsGen.appendChild($specsTable)
+  // $specsTable.appendChild($tr)
+  // $tr.appendChild($td)
+  // $td.textContent = 'Role'
+  // $tr.appendChild($td)
+  // $td.textContent = ship.role
 
   return $ship
 }
