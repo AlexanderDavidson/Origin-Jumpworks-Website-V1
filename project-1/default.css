@@ -3,27 +3,18 @@
 }
 
 /* slideshow */
-.cb-slideshow,
-.cb-slideshow: after {
-  position: fixed;
-  width: 80%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  z-index: -20;
-}
 
 .cb-slideshow::after {
   content: '';
   background: transparent url(../images/pattern.png) repeat top left;
 }
 
-.cb-slideshow li span {
+.cb-slideshow li span { /* images */
   width: 100%;
-  height: 107%;
+  height: 100%;
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   color: transparent;
   background-size: cover;
   background-position: 50% 50%;
@@ -87,7 +78,7 @@
   z-index: 1000;
   position: static;
   bottom: 30px;
-  left: 0px;
+  left: 0;
   width: 100%;
   text-align: center;
   opacity: 0;
@@ -97,6 +88,7 @@
 
 .cb-slideshow li div h3 {
   font-family: 'Josefin Sans', sans-serif;
+  position: absolute;
   bottom: 0.02em;
   font-size: 240px;
   padding: 0;
@@ -135,7 +127,18 @@
   .cb-slideshow li div h3 { font-size: 80px; }
 }
 
+/* li style */
+li {
+  list-style: none;
+}
+
 /* ------------------=====--------------------------- */
+
+#slideshow-origin {
+  position: relative;
+  height: 100vh;
+  margin-bottom: 1em;
+}
 
 #Origin-Info {
   background: url(http://vignette1.wikia.nocookie.net/starcitizen/images/d/d3/350r_engine_visual.jpg/revision/latest?cb=20140805123424);
@@ -143,33 +146,25 @@
   background-position: 50%;
   color: white;
   height: 100%;
+  width: 98%;
+  margin: initial;
 }
 
 .Origin-Name {
-  width: 18%;
-  position: absolute;
-  bottom: -30%;
-  margin: 3em;
+  width: 100%;
+  padding: 3em;
 }
 
 .Origin-History1 {
-  width: 20%;
-  position: absolute;
-  bottom: -39%;
-  margin: 1em;
+  padding: 1em;
 }
 
 .Origin-History2 {
-  width: 20%;
-  position: absolute;
-  bottom: -49%;
-  margin: 1em;
+  padding: 1em;
 }
 
 #galactic-tour {
-  position: absolute;
-  bottom: -53%;
-  margin: 1em;
+  padding: 1em;
 }
 
 #GTvideo {
@@ -187,7 +182,6 @@
 
 .container {
   margin: auto;
-
 }
 
 .row {
