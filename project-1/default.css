@@ -1,3 +1,12 @@
+#logoNav {
+  width: 20%;
+}
+
+.description {
+  margin-top: 3em;
+  width: 100%;
+}
+
 .container {
   margin: auto;
   max-width: 1440px;
@@ -11,10 +20,29 @@
   width: 100%;
 }
 
-.description {
+.hidden {
+  display: none;
+}
+
+.descriptionBase {
   position: absolute;
   bottom: 0;
   margin: 0.5em;
+}
+
+.descriptionRace {
+  position: absolute;
+  bottom: 0;
+  margin: 0.5em;
+}
+
+.featured {
+  width: 30%;
+}
+
+#threeDAsset {
+  position: absolute;
+  bottom: 2;
 }
 
 #threeHundredI {
@@ -54,9 +82,9 @@
 }
 
 #three50r {
-  background: url(http://i.imgur.com/gYLaaBj.jpg);
+  background: url(http://vignette2.wikia.nocookie.net/starcitizen/images/0/0e/350r_flight_visual.jpg/revision/latest?cb=20140805123046);
   background-size: cover;
-  background-position: center;
+  background-position: 100% 10%;
   color: white;
   height: calc(32em);
   width: 100%;
@@ -75,18 +103,35 @@
   background-size: cover;
 }
 
-.modal-body {
-  background-color: #333;
+.panel-body {
+  color: white;
+  background: rgb(14, 29, 45); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(14, 29, 45, 1) 0%, rgba(48, 66, 81, 1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(14, 29, 45, 1) 0%, rgba(48, 66, 81, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(14, 29, 45, 1) 0%, rgba(48, 66, 81, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid: dximagetransform.microsoft.gradient(startColorstr='#0e1d2d', endColorstr='#304251', GradientType=0); /* IE6-9 */
 }
 
-.modal-header {
-  background-color: #555;
+.panel-heading {
+  font-size: x-large;
+  background: rgb(48, 66, 81); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(48, 66, 81, 1) 0%, rgba(14, 29, 45, 1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(48, 66, 81, 1) 0%, rgba(14, 29, 45, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(48, 66, 81, 1) 0%, rgba(14, 29, 45, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid: dximagetransform.microsoft.gradient(startColorstr='#304251', endColorstr='#0e1d2d', GradientType=0); /* IE6-9 */
+}
+
+.specs {
+  background-color: rgba(48, 66, 81, 1);
 }
 
 .modal-footer {
   background-color: #555;
 }
 
+.nav-tabs {
+  background-color: white;
+}
 /* -------- Mass Tables --------- */
 #threeHundredIMassTable,
 #three15pTable,
@@ -110,4 +155,10 @@
 #three25aRotation,
 #three50rRotation {
   color: black;
+}
+
+/* for customized bootstrap html {
+  font-family: 'Josefin Sans', sans-serif;sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
