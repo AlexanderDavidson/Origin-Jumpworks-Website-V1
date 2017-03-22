@@ -172,6 +172,14 @@
   margin: 1em;
 }
 
+#GTvideo {
+  width: 100%;
+}
+
+.GTmodal-title {
+  color: black;
+}
+
 .description {
   margin-top: 3em;
   width: 100%;

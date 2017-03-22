@@ -74,7 +74,25 @@
           <img src="../Project-1/assets/origin-logo-vector.png" class="Origin-Name" alt="Origin Jumpworks GmbH">
           <p class="Origin-History1">Origin Jumpworks was incorporated during the Glowing Age in Cologne, Germany, and was originally a producer of high-quality fusion engines for other ship manufacturers. However, after a decade of engine production, in 2889 the company moved to ship production, and the Lang brothers constructed the prototype of the X3, Origin's first starship[2]. The initial 200 and 300 series were first revealed in 2899.</p>
           <p class="Origin-History2">For the first two decades of Origin's existence, it had strong ties to earth. However, in 2913, company president Jennifer Friskers moved corporate headquarters and the primary design team to New Austin on Terra. Manufacturing has since been outsourced, with only an engine testing facility remaining on Earth's moon.[1] Origin has a strict anti-piracy policy, with the company spending billions to counter piracy, and refusing sales of 300 series ships to known pirates attempting to purchase craft from Origin in person.</p>
-          <button class="bt btn-default" id="galactic-tour">Watch Our Segment on Galactic Tour</button>
+          <button class="bt btn-default" id="galactic-tour" data-toggle="modal" data-target="#GTmodal">Watch Our Segment on Galactic Tour</button>
+          <div class="modal fade" id="GTmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="GTmodal-title" id="GTmodalLabel">Galactic Tour ⟁ Origin Jumpworks</h4>
+                </div>
+                <div class="GTmodal-body">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe id="GTvideo" class="embed-responsive-item" src="https://www.youtube.com/embed/YYeBhPvhybk?autoplay=0&controls=0&disablekb=1&enablejsapi=1&fs=0&modestbranding=1&rel=0&showinfo=0"></iframe>
+                  </div>
+                </div>
+                <div class="GTmodal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
