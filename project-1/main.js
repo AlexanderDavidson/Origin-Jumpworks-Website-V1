@@ -128,7 +128,7 @@ var baseShips = [
     name: '350r',
     role: 'Racing',
     flavorText: 'The combination of a Gangleri BP 707 Standard powerplant with a 300i fuselage re-engineered to accommodate twin Hammer Propulsion HM 4.3 thrusters makes the 350r the fastest personal craft you’ll ever call your own.',
-    buttonExplore: 'Explore the 325a',
+    buttonExplore: 'Explore the 350r',
     id: 'three50r',
     shipBg: 'http://i.imgur.com/gYLaaBj.jpg',
     vidEmbed: 'https://www.youtube.com/embed/fYjD1wiTBmM?autoplay=1&controls=0&disablekb=1&enablejsapi=1&fs=0&modestbranding=1&rel=0&showinfo=0',
