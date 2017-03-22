@@ -148,19 +148,25 @@
 .Origin-Name {
   width: 18%;
   position: absolute;
-  bottom: -33%;
+  bottom: -30%;
   margin: 3em;
 }
 
 .Origin-History1 {
   width: 20%;
   position: absolute;
-  bottom: -43%;
+  bottom: -39%;
   margin: 1em;
 }
 
 .Origin-History2 {
   width: 20%;
+  position: absolute;
+  bottom: -49%;
+  margin: 1em;
+}
+
+#galactic-tour {
   position: absolute;
   bottom: -53%;
   margin: 1em;
@@ -301,35 +307,3 @@
   height: 100vh;
   width: 100%;
 }
-
-/* -------- Mass Tables --------- */
-#threeHundredIMassTable,
-#three15pTable,
-#three25aMassTable {
-  color: black;
-}
-
-/* --------- Velocity Tables --------- */
-
-#threeHundredIVelocity,
-#three15pVelocity,
-#three25aVelocity,
-#three50rVelocity {
-  color: black;
-}
-
-/* -------- Rotation Tables --------- */
-
-#threeHundredIRotation,
-#three15pRotation,
-#three25aRotation,
-#three50rRotation {
-  color: black;
-}
-
-/* for customized bootstrap html {
-  font-family: 'Josefin Sans', sans-serif;sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-*/
