@@ -40,7 +40,7 @@ var baseShips = [
     maxAccelYaw: 50,
     maxAccelRoll: 950,
     modalFlavorTitle: 'DISTINCT LUXURY',
-    modalFlavorText: 'The 300i touring model is the premiere spacecraft hull on the market today. A true jack-of-all-trades, the 300i is capable of making any role its own and doing so with the class and sophistication expected of an ORIGIN design. All models feature Gorgon Defender shields and A&amp;R Omnisky VI cannon standard.',
+    modalFlavorText: 'The 300i touring model is the premiere spacecraft hull on the market today. A true jack-of-all-trades, the 300i is capable of making any role its own and doing so with the class and sophistication expected of an ORIGIN design. All models feature Gorgon Defender shields and & Omnisky VI cannon standard.',
   },
   {
     name: '315p',
@@ -241,8 +241,30 @@ function renderShipDetails(ship) {
   var $aframeTurntable = document.createElement('a-animation')
   // for material -- var $aframeEntity = document.createElement('a-entity')
 
-  var $specs = document.createElement('div')
+  //var $specs = document.createElement('div')
 
+  /* ------- Charts Chart.js -----
+  var $specVelChart = document.createElement('div')
+  $specVelChart.id = 'specVelChart'
+  var ctx = document.getElementById("specVelChart");
+  var specVelChart = new Chart(ctx, {
+    type: 'specVelChart',
+    data: {
+      labels: ["M", "T", "W", "T", "F", "S", "S"],
+      datasets: [{
+        label: 'apples',
+        backgroundColor: "rgba(153,255,51,0.4)",
+        borderColor: "rgba(153,255,51,1)",
+        data: [12, 19, 3, 17, 28, 24, 7]
+      }, {
+        label: 'oranges',
+        backgroundColor: "rgba(255,153,0,0.4)",
+        borderColor: "rgba(255,153,0,1)",
+        data: [30, 29, 5, 5, 20, 3, 10]
+      }]
+    }
+  });
+*/
 
   // var $addToCart = document.createElement('button')
 
@@ -263,13 +285,7 @@ function renderShipDetails(ship) {
   $infoCol.classList.add('col-xs-3')
   $threeDCol.classList.add('col-xs-9')
   $threeDCol.id = 'myEmbeddedScene'
-  // $sketchFab.setAttribute('width', 400)
-  // $sketchFab.setAttribute('height', 220)
-  // $sketchFab.classList.add('sketchFab')
-  // $sketchFab.setAttribute('src', ship.sketchFab)
-  // $sketchFab.classList.add('frameborder', 0)
 
-  // for material - $aframeEntity.setAttribute('obj-model', )
   $aframeAsset.id = ship.threeDid
   $aframe.setAttribute('embedded', 'true')
   $aframe.setAttribute('style', 'height: 350px; width: 100%')
@@ -282,12 +298,7 @@ function renderShipDetails(ship) {
   $aframeAsset.setAttribute('rotation', '0 135 30')
   $aframeAsset.setAttribute('scale', '0.007 0.007 0.007')
   $aframeAsset.setAttribute('visible', 'true')
-  // $aframeAsset.setAttribute('src', ship.threeDfileLocal)
-  // $aframeAsset.setAttribute('material', 'material="offset: [object Object]; repeat: [object Object]; ambientOcclusionTextureOffset: [object Object]; ambientOcclusionTextureRepeat: [object Object]; color: rgb(255,255,255); displacementTextureOffset: [object Object]; displacementTextureRepeat: [object Object]; envMap: #reflection; metalness: 0.5; normalScale: [object Object]; normalTextureOffset: [object Object]; normalTextureRepeat: [object Object]; roughness: 0.25')
-  // $aframeAsset.setAttribute('position', '0 1.25 -1')
-  // $aframeAsset.setAttribute('rotation', '0 135 30')
-  // $aframeAsset.setAttribute('scale', '0.001 0.001 0.001')
-  // $aframeAsset.setAttribute('visible', 'true')
+
   $aframeLight.id = 'firstLight'
   $aframeLight.setAttribute('light', 'color: #00a0ff')
   $aframeLight.setAttribute('position', '13 3 -44')
@@ -314,13 +325,7 @@ function renderShipDetails(ship) {
   $description.textContent = ship.modalFlavorText
   $description.classList.add('description')
 
-  $specs.classList.add('col-xs-12', 'specs')
-
-
-
-  // $addToCart.classList.add('btn', 'btn-default', 'cartButton')
-  // $addToCart.textContent = 'Add to Cart'
-  // $addToCart.setAttribute('href', '#')
+  // $specs.classList.add('col-xs-12', 'specs')
 
 // ----- Appends -----
 
@@ -348,16 +353,7 @@ function renderShipDetails(ship) {
 
   $panel.appendChild($body)
 
-  $panel.appendChild($specs)
-
-
-  //$specsGen.appendChild(specsGenTableCreator())
-  // $specsGen.appendChild($specsTable)
-  // $specsTable.appendChild($tr)
-  // $tr.appendChild($td)
-  // $td.textContent = 'Role'
-  // $tr.appendChild($td)
-  // $td.textContent = ship.role
+  // $panel.appendChild($specs)
 
   return $ship
 }
