@@ -12,36 +12,44 @@ var baseShips = [
     sketchFab: 'https://sketchfab.com/models/504663144d53469199baa53f5b934cd1/embed?autospin=0.2&amp;autostart=1&amp;preload=1;transparent=1;controls=0&amp;ui_settings=0&amp;ui_help=0&amp;ui_vr=0&amp;ui_animations=0&amp;ui_annotations=0&amp;ui_infos=0&amp',
     threeDfileLocal: 'https://ucarecdn.com/d326e462-4edf-438c-840a-9559bb62fe3e/',
     threeDid: 'threeHundredI-obj',
-    maxCrew: 1,
-    mass: 20085,
-    cargo: 4,
-    length: 24,
-    height: 7,
-    beam: 16,
-    upgradeCap: 6,
-    hullMat: 'Metal',
-    pwrPlantSize: 3,
-    pwrPlantFactory: 'VACOM StarHeart IV',
-    thrustersMainNum: 1, // 1x TR4
-    engineFactory: 'Hammer Propulsion HE 5.3',
-    thrustersManeuveringNum: 12, //12x TR4
-    thrustersManeuveringMake: '10× Origin Scalpel Precision, 2× Origin Omni Precision',
-    sheild: 'Gorgon Defender AllStop',
-    weaponSysC1: '2× A&amp;R Omnisky VI Laser Cannons',
-    weaponSysC2: 'N/A',
-    weaponSysC3: 'N/A',
-    vPrecision: 50,
-    vSCM: 215,
-    vBoost: 645,
-    maxSpeedPitch: 65,
-    maxSpeedYaw: 65.0,
-    maxSpeedRoll: 75,
-    maxAccelPitch: 950,
-    maxAccelYaw: 50,
-    maxAccelRoll: 950,
+    equipment: {
+      maxCrew: 1,
+      mass: 20085,
+      cargo: 4,
+      length: 24,
+      height: 7,
+      beam: 16,
+      upgradeCap: 6,
+      hullMat: 'Metal',
+      pwrPlantSize: 3,
+      pwrPlantFactory: 'VACOM StarHeart IV',
+      thrustersMainNum: 1, // 1x TR4
+      engineFactory: 'Hammer Propulsion HE 5.3',
+      thrustersManeuveringNum: 12, //12x TR4
+      thrustersManeuveringMake: '10× Origin Scalpel Precision, 2× Origin Omni Precision',
+      sheild: 'Gorgon Defender AllStop',
+      weaponSysC1: '2× A&amp;R Omnisky VI Laser Cannons',
+      weaponSysC2: 'N/A',
+      weaponSysC3: 'N/A',
+    },
+    velocity: {
+      vPrecision: 50,
+      vSCM: 215,
+      vBoost: 645,
+    },
+    rotation: {
+      maxSpeedPitch: 65,
+      maxSpeedYaw: 65.0,
+      maxSpeedRoll: 75,
+      maxAccelPitch: 950,
+      maxAccelYaw: 50,
+      maxAccelRoll: 950,
+    },
     modalFlavorTitle: 'DISTINCT LUXURY',
     modalFlavorText: 'The 300i touring model is the premiere spacecraft hull on the market today. A true jack-of-all-trades, the 300i is capable of making any role its own and doing so with the class and sophistication expected of an ORIGIN design. All models feature Gorgon Defender shields and & Omnisky VI cannon standard.',
   },
+  // seperate spec into individule properties ^^^
+  // change keys to '...' ex 'Engine Factory': '....'
   {
     name: '315p',
     role: 'Exploration',
@@ -373,6 +381,23 @@ function findRaceShip(raceShip, shipId) {
       return raceShip[i]
     }
   }
+}
+
+function renderSpecs(ship) {
+  var $specs = document.createElement('div')
+  var $dataEquipment = document.createElement('dl')
+  $dataEquipment.classList.add('dl-horizontal')
+  $specs.appendChild($dataEquipment)
+  for(var key in ship.equipment) {
+    var $dataTerm = document.createElement('dt')
+    var $dataDesc = document.createElement('dd')
+    $dataTerm.textContent = key
+    $dataDesc.textContent = ship.equipment[key]
+    $dataEquipment.appendChild($dataTerm)
+    $dataEquipment.appendChild($dataDesc)
+  }
+  return $specs
+
 }
 
 function showView($views, viewId) {
