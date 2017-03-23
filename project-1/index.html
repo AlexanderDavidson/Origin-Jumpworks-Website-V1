@@ -26,7 +26,7 @@
         </div>
       </div>
     </nav>
-    <div id="slideshow-origin">
+    <div class="hidden" id="slideshow-origin">
       <ul class="cb-slideshow">
       	<li>
       		<span>Image 01</span>
@@ -68,8 +68,9 @@
 
     </div>
     <!-- Origin Information -->
-    <div class="container">
-      <div class="row" id="Origin-Info">
+    <!-- Base Ships divided in 3 panels with links to more info and add to cart -->
+    <div class="container below" id="views">
+      <div class="row hidden" id="Origin-Info">
         <div class="col-xs-4">
           <img src="../Project-1/assets/origin-logo-vector.png" class="Origin-Name" alt="Origin Jumpworks GmbH">
           <p class="Origin-History1">Origin Jumpworks was incorporated during the Glowing Age in Cologne, Germany, and was originally a producer of high-quality fusion engines for other ship manufacturers. However, after a decade of engine production, in 2889 the company moved to ship production, and the Lang brothers constructed the prototype of the X3, Origin's first starship[2]. The initial 200 and 300 series were first revealed in 2899.</p>
@@ -86,34 +87,68 @@
               <p>New Austin has since become an “ORIGIN town,” with the company holding fast as the key employer (Omega Foods, the corporate entity responsible for the Crab-O chain, is a distant second). The system has become a mecca for ORIGIN enthusiasts, with wealthy buyers traveling across the galaxy to purchase their ships straight from the factory floor. A stunning company showcase in the center of the city highlights M50s, 300s and 890 JUMPs in a series of life-sized action dioramas costing millions to set up and display, and ORIGIN has sponsored naming rights for local stadiums, high schools and streets. Tourists leaving New Austin without a 300 Series shotglass or keychain is nearly unheard of!</p>
             </div>
           </div>
-          <!-- <button class="btn btn-default" id="galactic-tour" data-toggle="modal" data-target="#GTmodal">Watch Our Segment on Galactic Tour</button>
-          <div class="modal fade" id="GTmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="GTmodal-title" id="GTmodalLabel">Galactic Tour ⟁ Origin Jumpworks</h4>
-                </div>
-                <div class="GTmodal-body">
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <iframe id="GTvideo" class="embed-responsive-item" src="https://www.youtube.com/embed/YYeBhPvhybk?autoplay=0&controls=0&disablekb=1&enablejsapi=1&fs=0&modestbranding=1&rel=0&showinfo=0"></iframe>
-                  </div>
-                </div>
-                <div class="GTmodal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
-          </div> -->
         </div>
       </div>
-    </div>
-    <!-- Base Ships divided in 3 panels with links to more info and add to cart -->
-    <div class="container below" id="views">
       <!-- Base Ships -->
-      <div class="row ship-list" id="base-ships">
+      <div class="row ship-list hidden" id="base-ships">
       </div>
       <div class="row hidden" id="ship-details">
+      </div>
+      <div class="row" id="quote-form">
+        <div class="container-fluid">
+          <form>
+            <div class="row">
+              <div class="col-xs-5">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-xs-2">
+                        <div class="form-group">
+                          <select name="title" class="form-control">
+                            <option value="Mr">Mr</option>
+                            <option value="Ms">Ms</option>
+                            <option value="Mrs">Mrs</option>
+                            <option value="Dr">Dr</option>
+                            <option value="Col">Colonel</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-xs-4">
+                        <div class="form-group">
+                          <input class="form-control" placeholder="Given Name" />
+                        </div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="form-group">
+                          <input class="form-control" placeholder="Surname" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <div class="form-group">
+                          <input class="form-control" placeholder="Spectrum Handle" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-xs-4">
+                <button class="btn btn-default">Terra</button>
+                <button class="btn btn-default">Davien I</button>
+                <button class="btn btn-default">Stanton</button>
+                <button class="btn btn-default">Keil</button>
+              </div>
+              <div class="col-xs-1">
+                <button class="btn btn-default" type="submit">Request a Quote</button>
+              </div>
+              <div class="col-xs-1">
+              </div>
+              <div class="col-xs-1">
+              </div>
+            </div>
+          </form>
+        </div>
+
       </div>
     </div>
     <div id="after-ships-img">

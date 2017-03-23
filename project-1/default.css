@@ -204,13 +204,13 @@ li {
   margin: auto;
 }
 
-.row {
+/*.row {
   left: auto;
   right: auto;
   padding: 1em;
   height: calc(42em);
   width: 100%;
-}
+}*/
 
 .hidden {
   display: none;
