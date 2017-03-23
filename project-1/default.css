@@ -35,7 +35,7 @@
 }
 
 .cb-slideshow li:nth-child(3) span {
-  background-image: url(../Project-1/assets/speed.jpg);
+  background-image: url(../Project-1/assets/speed.png);
   animation-delay: 12s;
 }
 
@@ -169,6 +169,14 @@ li {
 
 #GTvideo {
   width: 100%;
+}
+
+.history-well {
+  position: absolute;
+  display: inline;
+  z-index: 10;
+  color: black;
+  width: 200%;
 }
 
 .GTmodal-title {
