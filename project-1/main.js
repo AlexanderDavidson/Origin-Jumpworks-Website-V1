@@ -387,6 +387,8 @@ function showView($views, viewId) {
   }
 }
 
+
+
 function clearViews () {
   document.getElementById('ship-details').innerHTML = ""
 }
@@ -413,6 +415,11 @@ document.addEventListener('DOMContentLoaded', function() {
     showView($views, 'ship-details')
     $shipDetails.innerHTML = ''
     $shipDetails.appendChild(renderShipDetails(ship))
+  })
+
+  $('#perspectives a').click(function (e) {
+    e.preventDefault()
+    $(this).tab('show')
   })
 
 

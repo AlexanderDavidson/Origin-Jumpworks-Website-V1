@@ -320,6 +320,10 @@ li {
   background-color: white;
 }
 
+.tab-content img {
+  width: 100%;
+}
+
 #after-ships-img {
   position: static;
   color: white;
