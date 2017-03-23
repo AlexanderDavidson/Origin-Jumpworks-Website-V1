@@ -248,6 +248,8 @@ function renderShipDetails(ship) {
   var $aframeCam = document.createElement('a-entity')
   var $aframeTurntable = document.createElement('a-animation')
   var $orderButton = document.createElement('button')
+  $orderButton.textContent = 'Request a Quote'
+  $orderButton.dataset.shipId = ship.id
   // for material -- var $aframeEntity = document.createElement('a-entity')
 
   //var $specs = document.createElement('div')
@@ -439,9 +441,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     var shipId = event.target.getAttribute('data-ship-id')
     var ship = findBaseShip(baseShips, shipId)
-    showView($views, 'ship-details')
     $shipDetails.innerHTML = ''
     $shipDetails.appendChild(renderShipDetails(ship))
+    showView($views, 'ship-details')
   })
 
   $('#perspectives a').click(function (e) {
@@ -456,6 +458,9 @@ document.addEventListener('DOMContentLoaded', function() {
     var shipId = event.target.getAttribute('data-ship-id')
     var ship = findBaseShip(baseShips, shipId)
     showView($views, 'quote-form')
+    var $specsSwap = document.querySelector('#specifications')
+    $specsSwap.innerHTML = ''
+    $specsSwap.appendChild(renderSpecs(ship))
   })
 
   $home.addEventListener('click', function (event) {

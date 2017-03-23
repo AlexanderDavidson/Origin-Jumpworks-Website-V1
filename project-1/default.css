@@ -204,7 +204,7 @@ li {
   margin: auto;
 }
 
-.row {
+.ship-list {
   left: auto;
   right: auto;
   padding: 1em;
@@ -316,6 +316,35 @@ li {
 
 .tab-content img {
   width: 100%;
+}
+
+.btn-blue-paint,
+.btn-silver-paint,
+.btn-red-paint,
+.btn-int-leather,
+.btn-int-carbon {
+  width: 11em;
+  height: 2em;
+}
+
+.btn-blue-paint {
+  background-image: url(../Project-1/assets/blue-paint.jpg)
+}
+
+.btn-silver-paint {
+  background-image: url(../Project-1/assets/silver-paint.jpg)
+}
+
+.btn-red-paint {
+  background-image: url(../Project-1/assets/red-paint.jpg)
+}
+
+.btn-int-leather {
+  background-image: url(../Project-1/assets/int-leather.jpg)
+}
+
+.btn-int-carbon {
+  background-image: url(../Project-1/assets/int-carbon.jpg)
 }
 
 #after-ships-img {
