@@ -247,6 +247,7 @@ function renderShipDetails(ship) {
   var $aframeKeyLight = document.createElement('a-light')
   var $aframeCam = document.createElement('a-entity')
   var $aframeTurntable = document.createElement('a-animation')
+  var $orderButton = document.createElement('button')
   // for material -- var $aframeEntity = document.createElement('a-entity')
 
   //var $specs = document.createElement('div')
@@ -357,6 +358,7 @@ function renderShipDetails(ship) {
   $aframe.appendChild($aframeLight)
   $aframe.appendChild($aframeDirLight)
   $aframe.appendChild($aframeKeyLight)
+  $infoCol.appendChild($orderButton)
   // $body.appendChild($addToCart)
 
   $panel.appendChild($body)
@@ -447,6 +449,14 @@ document.addEventListener('DOMContentLoaded', function() {
     $(this).tab('show')
   })
 
+  $shipDetails.addEventListener('click', function (event) {
+    if (event.target.tagName !== 'BUTTON') {
+      return
+    }
+    var shipId = event.target.getAttribute('data-ship-id')
+    var ship = findBaseShip(baseShips, shipId)
+    showView($views, 'quote-form')
+  })
 
   $home.addEventListener('click', function (event) {
     showView($views, 'base-ships')
