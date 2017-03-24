@@ -145,22 +145,30 @@ li {
   background-size: cover;
   background-position: 50%;
   color: white;
-  height: 100%;
-  width: 98%;
-  margin: initial;
+  height: 64vh;
+  width: 100%;
+  margin: 0;
 }
 
 .Origin-Name {
   width: 100%;
   padding: 3em;
+  margin-bottom: 8em;
 }
 
 .Origin-History1 {
-  padding: 1em;
+  padding-left: 5em;
+  padding-right: 5em;
 }
 
 .Origin-History2 {
-  padding: 1em;
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+#Hist-Button {
+  margin-left: 5em;
+  margin-top: 2em;
 }
 
 #galactic-tour {
@@ -195,6 +203,10 @@ li {
   color: black;
 }
 
+#views {
+  padding: 0;
+}
+
 .description {
   margin-top: 3em;
   width: 100%;
@@ -204,12 +216,19 @@ li {
   margin: auto;
 }
 
+
 .ship-list {
   left: auto;
   right: auto;
-  padding: 1em;
-  height: calc(42em);
+  padding: 0;
+  height: 74em;
   width: 100%;
+}
+
+.descriptionBase {
+  padding-top: 52em;
+  padding-right: 39em;
+  padding-left: 2em;
 }
 
 .hidden {
@@ -266,10 +285,10 @@ li {
   background-size: cover;
   background-position: 100% 10%;
   color: white;
-  height: calc(32em);
+  height: 74em;
   width: 100%;
   margin: 0;
-  margin-top: 2%;
+  margin-top: 1.5em;
 }
 
 #raceShip {
@@ -355,4 +374,14 @@ li {
   background-size: cover;
   height: 100vh;
   width: 100%;
+}
+#between-ships-img {
+  position: static;
+  color: white;
+  background-image: url(http://i.imgur.com/5LvQJI2.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 60vh;
+  width: 100%;
+  margin-bottom: 1.5em;
 }

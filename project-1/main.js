@@ -423,7 +423,8 @@ function clearViews () {
 }
 // ----- EVENT LISTENERS -----
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function(event) {
+  event.preventDefault()
   var $baseShips = document.querySelector('#base-ships')
   baseShips.forEach(function(ship) {
     var $ship = baseShip(ship, 4)
