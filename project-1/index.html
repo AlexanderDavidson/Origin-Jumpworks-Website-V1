@@ -68,40 +68,117 @@
 
     </div>
     <!-- Origin Information -->
-    <div class="container">
+    <!-- Base Ships divided in 3 panels with links to more info and add to cart -->
+    <div class="container below" id="views">
       <div class="row" id="Origin-Info">
         <div class="col-xs-4">
           <img src="../Project-1/assets/origin-logo-vector.png" class="Origin-Name" alt="Origin Jumpworks GmbH">
           <p class="Origin-History1">Origin Jumpworks was incorporated during the Glowing Age in Cologne, Germany, and was originally a producer of high-quality fusion engines for other ship manufacturers. However, after a decade of engine production, in 2889 the company moved to ship production, and the Lang brothers constructed the prototype of the X3, Origin's first starship[2]. The initial 200 and 300 series were first revealed in 2899.</p>
           <p class="Origin-History2">For the first two decades of Origin's existence, it had strong ties to earth. However, in 2913, company president Jennifer Friskers moved corporate headquarters and the primary design team to New Austin on Terra. Manufacturing has since been outsourced, with only an engine testing facility remaining on Earth's moon.[1] Origin has a strict anti-piracy policy, with the company spending billions to counter piracy, and refusing sales of 300 series ships to known pirates attempting to purchase craft from Origin in person.</p>
-          <button class="btn btn-default" id="galactic-tour" data-toggle="modal" data-target="#GTmodal">Watch Our Segment on Galactic Tour</button>
-          <div class="modal fade" id="GTmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="GTmodal-title" id="GTmodalLabel">Galactic Tour ⟁ Origin Jumpworks</h4>
-                </div>
-                <div class="GTmodal-body">
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <iframe id="GTvideo" class="embed-responsive-item" src="https://www.youtube.com/embed/YYeBhPvhybk?autoplay=0&controls=0&disablekb=1&enablejsapi=1&fs=0&modestbranding=1&rel=0&showinfo=0"></iframe>
-                  </div>
-                </div>
-                <div class="GTmodal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-              </div>
+          <button id="Hist-Button" class="btn btn-default" role="button" data-toggle="collapse" href="#collapse-Hist" aria-expanded="true" aria-controls="collapse-Hist">Learn More about Origin</button>
+          <div class="collapse" id="collapse-Hist">
+            <div class="well history-well">
+              <h2>History</h2>
+              <p>If it is possible for a company to merge class and sophistication with the sheer risk of spaceflight and the cold-blooded nature of interstellar dogfighting, ORIGIN Jumpworks GmbH comes the closest. The company’s extensive array of high-end spacecraft is known for their sleek and sophisticated lines. Similarly, they have cultivated an exclusive customer base from the rich and the powerful. As ORIGIN’s perfectly-manicured salesmen eagerly point out, selecting an ORIGIN design doesn’t just mean buying a ship … it means choosing a lifestyle. </p>
+              <p>ORIGIN was incorporated during the so-called Glowing Age, the financial boom of the mid-28th century that followed the antimatter rush. For their first decade, the company produced high quality fusion engines used by the UEE military and mounted on the ostentatious Roberts Space Industries and Aegis Dynamics star yachts available to the public (at least, the well-heeled public) at the time. With the need for personal spacecraft growing exponentially, ORIGIN moved to compete with the companies they initially supplied.</p>
+              <p>Within ten years, the company was producing a top-five selling midscale composite transport and within fifty their well-paying customer base was neck and neck with RSI for gross profits in the manufactured spacecraft field. ORIGIN premiered their initial 200 and 300 lines of personal ships in 2899 and has held a strong second in that market ever since.</p>
+              <p>Founded on the banks of the Rhine in Cologne, Germany, ORIGIN had strong ties to Earth for the first two centuries of their existence, originally going so far as to insist that every component for their elite 600 line be manufactured in-Sol. In recent years, these ties have been severed completely.</p>
+              <p>Declaring Terra the new cultural capital of the UEE, President Jennifer Friskers made the then-unpopular decision to relocate to Terra. In a largely unexpected executive order, she moved corporate headquarters and the primary design team to the settlement of New Austin in 2913. Since that time, manufacturing has become nearly completely outsourced, with only an engine testing facility remaining on Earth’s moon. Government scrutiny of the company since the move has also flourished, with tax issues quadrupling following the decision to leave Earth.</p>
+              <p>New Austin has since become an “ORIGIN town,” with the company holding fast as the key employer (Omega Foods, the corporate entity responsible for the Crab-O chain, is a distant second). The system has become a mecca for ORIGIN enthusiasts, with wealthy buyers traveling across the galaxy to purchase their ships straight from the factory floor. A stunning company showcase in the center of the city highlights M50s, 300s and 890 JUMPs in a series of life-sized action dioramas costing millions to set up and display, and ORIGIN has sponsored naming rights for local stadiums, high schools and streets. Tourists leaving New Austin without a 300 Series shotglass or keychain is nearly unheard of!</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- Base Ships divided in 3 panels with links to more info and add to cart -->
-    <div class="container below" id="views">
+      <div id="between-ships-img">
+        <h5 id="originPresents">Origin Jumpworks Presents</h5>
+        <h1 id="three00series">300 SERIES</h1>
+      </div>
       <!-- Base Ships -->
       <div class="row ship-list" id="base-ships">
       </div>
       <div class="row hidden" id="ship-details">
+      </div>
+      <div class="row hidden" id="quote-form">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-8" id="perspectives">
+              <ul class="nav nav-tabs">
+                <li role="presentation" class="active" ><a href="#" data-toggle="tab" data-target="#front">Front</a></li>
+                <li role="presentation"><a href="#" data-toggle="tab" data-target="#rear">Rear</a></li>
+              </ul>
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" ><img id="front" src=""></div> <!-- change to dynamicall insert with javascript -->
+                <div role="tabpanel" class="tab-pane" ><img id="rear" src=""></div> <!-- change to dynamicall insert with javascript -->
+              </div>
+              <div class="btn-group" role="button" id="paint">
+                <button type="button" class="btn btn-default" id="btn-blue-paint"><span class="glyphicons glyphicons-brush"></span></button>
+                <button type="button" class="btn btn-default" id="btn-silver-paint"><span class="glyphicons glyphicons-brush"></span></button>
+                <button type="button" class="btn btn-default" id="btn-red-paint"><span class="glyphicons glyphicons-brush"></span></button>
+              </div>
+              <div class="btn-group pull-right" role="button" id="interior">
+                <button type="button" class="btn btn-default" id="btn-int-leather"><span class="glyphicons glyphicons-brush"></span></button>
+                <button type="button" class="btn btn-default" id="btn-int-carbon"><span class="glyphicons glyphicons-brush"></span></button>
+              </div>
+            </div>
+            <div class="col-xs-4" id="specifications">
+            </div>
+          </div>
+          <div class="row">
+            <form id="request-form">
+              <div class="col-xs-5 form-col formBottomRow">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-xs-2">
+                        <div class="form-group">
+                          <select name="title" class="form-control">
+                            <option value="Mr">Mr</option>
+                            <option value="Ms">Ms</option>
+                            <option value="Mrs">Mrs</option>
+                            <option value="Dr">Dr</option>
+                            <option value="Col">Colonel</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-xs-4">
+                        <div class="form-group">
+                          <input class="form-control" placeholder="Given Name" />
+                        </div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="form-group">
+                          <input class="form-control" placeholder="Surname" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <div class="form-group">
+                          <input class="form-control" placeholder="Spectrum Handle" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-xs-4 formBottomRow">
+                <h3 id="planetChoice">Choose Your Planet</h3>
+                <div id="planetBtn">
+                  <input type="image" src="http://www.pngmart.com/files/3/Space-Planet-PNG-Free-Download.png" name="saveForm" class="btTxt submit" id="terra" />
+                  <input type="image" src="http://www.pngmart.com/files/3/Space-Planet-PNG-File.png" name="saveForm" class="btTxt submit" id="davien" />
+                  <input type="image" src="http://www.pngmart.com/files/3/Space-Planet-PNG-Transparent-Image.png" name="saveForm" class="btTxt submit" id="stanton" />
+                  <input type="image" src="http://www.pngmart.com/files/3/Space-Planet-Transparent-Background.png" name="saveForm" class="btTxt submit" id="kiel" />
+                </div>
+              </div>
+              <div class="col-xs-1 formBottomRow">
+                <button class="btn btn-default" type="submit" id="requestBtn">Request a Quote</button>
+              </div>
+              <div class="col-xs-1 formBottomRow"><h1 id="formRowModel"></h1> <!--model name -->
+              </div>
+              <div class="col-xs-1 formBottomRow">
+                <img src="../Project-1/assets/origin-logo-vector.png" class="Origin-Name-form" alt="Origin Jumpworks GmbH">
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
     <div id="after-ships-img">

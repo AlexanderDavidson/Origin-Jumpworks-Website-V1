@@ -12,36 +12,45 @@ var baseShips = [
     sketchFab: 'https://sketchfab.com/models/504663144d53469199baa53f5b934cd1/embed?autospin=0.2&amp;autostart=1&amp;preload=1;transparent=1;controls=0&amp;ui_settings=0&amp;ui_help=0&amp;ui_vr=0&amp;ui_animations=0&amp;ui_annotations=0&amp;ui_infos=0&amp',
     threeDfileLocal: 'https://ucarecdn.com/d326e462-4edf-438c-840a-9559bb62fe3e/',
     threeDid: 'threeHundredI-obj',
-    maxCrew: 1,
-    mass: 20085,
-    cargo: 4,
-    length: 24,
-    height: 7,
-    beam: 16,
-    upgradeCap: 6,
-    hullMat: 'Metal',
-    pwrPlantSize: 3,
-    pwrPlantFactory: 'VACOM StarHeart IV',
-    thrustersMainNum: 1, // 1x TR4
-    engineFactory: 'Hammer Propulsion HE 5.3',
-    thrustersManeuveringNum: 12, //12x TR4
-    thrustersManeuveringMake: '10× Origin Scalpel Precision, 2× Origin Omni Precision',
-    sheild: 'Gorgon Defender AllStop',
-    weaponSysC1: '2× A&amp;R Omnisky VI Laser Cannons',
-    weaponSysC2: 'N/A',
-    weaponSysC3: 'N/A',
-    vPrecision: 50,
-    vSCM: 215,
-    vBoost: 645,
-    maxSpeedPitch: 65,
-    maxSpeedYaw: 65.0,
-    maxSpeedRoll: 75,
-    maxAccelPitch: 950,
-    maxAccelYaw: 50,
-    maxAccelRoll: 950,
+    orderFrontView: '../Project-1/assets/300iFrLow.jpg',
+    orderRearView: '../Project-1/assets/300iRear.jpg',
+    equipment: {
+      'Maximum Crew': 1,
+      'Mass': 20085,
+      'Cargo Cpacity': 4,
+      'Length': 24,
+      'Height': 7,
+      'Beam': 16,
+      'Upgrade Capacity': 6,
+      'Hull Material': 'Metal',
+      'Power Plant Size': 3,
+      'Power Plant': 'VACOM StarHeart IV',
+      'Number of Main Thrusters': 1, // 1x TR4
+      'Engine Factory': 'Hammer Propulsion HE 5.3', //12x
+      'Maneuvering Thrusters': '10× Origin Scalpel Precision, 2× Origin Omni Precision',
+      'Sheild': 'Gorgon Defender AllStop',
+      'Class 1 Weapons': '2× A&amp;R Omnisky VI Laser Cannons',
+      'Class 2 Weapons': 'N/A',
+      'Class 3 Weapons': 'N/A',
+    },
+    velocity: {
+      vPrecision: 50,
+      vSCM: 215,
+      vBoost: 645,
+    },
+    rotation: {
+      maxSpeedPitch: 65,
+      maxSpeedYaw: 65.0,
+      maxSpeedRoll: 75,
+      maxAccelPitch: 950,
+      maxAccelYaw: 50,
+      maxAccelRoll: 950,
+    },
     modalFlavorTitle: 'DISTINCT LUXURY',
     modalFlavorText: 'The 300i touring model is the premiere spacecraft hull on the market today. A true jack-of-all-trades, the 300i is capable of making any role its own and doing so with the class and sophistication expected of an ORIGIN design. All models feature Gorgon Defender shields and & Omnisky VI cannon standard.',
   },
+  // seperate spec into individule properties ^^^
+  // change keys to '...' ex 'Engine Factory': '....'
   {
     name: '315p',
     role: 'Exploration',
@@ -53,33 +62,40 @@ var baseShips = [
     sketchFab: 'https://sketchfab.com/models/48328d2b7e9c454a88da91f4b0d81311/embed?autospin=0.2&amp;autostart=1&amp;preload=1;transparent=1;ui_general_controls=0&amp;ui_settings=0&amp;ui_help=0&amp;ui_vr=0&amp;ui_animations=0&amp;ui_annotations=0&amp;ui_infos=0&amp',
     threeDfileLocal: 'https://ucarecdn.com/b77d3308-7b45-46a0-ab8d-32e284278b18/',
     threeDid: 'three15p-obj',
-    maxCrew: 1,
-    mass: 20085,
-    cargo: 6,
-    length: 24,
-    height: 7,
-    beam: 16,
-    upgradeCap: 6,
-    hullMat: 'Metal',
-    pwrPlantSize: 4,
-    pwrPlantFactory: 'Alliance Startech K3S-9',
-    thrustersMainNum: 1, //1x TR4
-    engineFactory: 'Dragon Stellar STC Silver',
-    thrustersManeuveringNum: 12, //12x TR1
-    thrustersManeuveringMake: '10× Origin Scalpel Precision, 2× Origin Omni Precision',
-    sheild: 'Gorgon Defender AllStop',
-    weaponSysC1: '2× A&amp;R Omnisky VI Laser Cannons',
-    weaponSysC2: 'Greycat Industrial SureGrip Tractor Beam',
-    weaponSysC3: 'N/A',
-    vPrecision: 50,
-    vSCM: 215,
-    vBoost: 700,
-    maxSpeedPitch: 65,
-    maxSpeedYaw: 65, //65.0°/s
-    maxSpeedRoll: 75,
-    maxAccelPitch: 950,
-    maxAccelYaw: 50,
-    maxAccelRoll: 950, //950°/s²
+    orderFrontView: '../Project-1/assets/315pFrLow.jpg',
+    orderRearView: '../Project-1/assets/315pRear.jpg',
+    equipment: {
+      'Maximum Crew': 1,
+      'Mass': 20085,
+      'Cargo Cpacity': 6,
+      'Length': 24,
+      'Height': 7,
+      'Beam': 16,
+      'Upgrade Capacity': 6,
+      'Hull Material': 'Metal',
+      'Power Plant Size': 4,
+      'Power Plant': 'Alliance Startech K3S-9',
+      'Number of Main Thrusters': 1, //1x TR4
+      'Engine Factory': 'Dragon Stellar STC Silver', //12x
+      'Maneuvering Thrusters': '10× Origin Scalpel Precision, 2× Origin Omni Precision',
+      'Sheild': 'Gorgon Defender AllStop',
+      'Class 1 Weapons': '2× A&amp;R Omnisky VI Laser Cannons',
+      'Class 2 Weapons': 'Greycat Industrial SureGrip Tractor Beam',
+      'Class 3 Weapons': 'N/A',
+    },
+    velocity: {
+      vPrecision: 50,
+      vSCM: 215,
+      vBoost: 700,
+    },
+    rotation: {
+      maxSpeedPitch: 65,
+      maxSpeedYaw: 65, //65.0°/s
+      maxSpeedRoll: 75,
+      maxAccelPitch: 950,
+      maxAccelYaw: 50,
+      maxAccelRoll: 950, //950°/s²
+    },
     modalFlavorTitle: 'BEYOND DISCOVERY',
     modalFlavorText: 'Exploration is man’s highest calling. Prepare to chart distant horizons with man’s most sophisticated piece of technology, the ORIGIN 315p. Featuring a more robust power plant and a custom scanning package, exclusively designed by Chimera Communications, the 315p is designed for the pilot who wants to go further, to see things that few have seen.',
   },
@@ -94,33 +110,40 @@ var baseShips = [
     sketchFab: 'https://sketchfab.com/models/2d050f5296e24debba9436958d1e4921/embed?autospin=0.2&amp;autostart=1&amp;preload=1;transparent=1;ui_general_controls=0&amp;ui_settings=0&amp;ui_help=0&amp;ui_vr=0&amp;ui_animations=0&amp;ui_annotations=0&amp;ui_infos=0&amp',
     threeDfileLocal: 'https://ucarecdn.com/033c60f0-80ad-44c5-ae3a-db1d8f08ea12/',
     threeDid: 'three25a-obj',
-    maxCrew: 1,
-    mass: 20085,
-    cargo: 4,
-    length: 24,
-    height: 7,
-    beam: 16,
-    upgradeCap: 6,
-    hullMat: 'Metal',
-    pwrPlantSize: 3,
-    pwrPlantFactory: 'VHT 2 Plus',
-    thrustersMainNum: 1, //1x TR4
-    engineFactory: 'Hammer Propulsion',
-    thrustersManeuveringNum: 12,  //12x TR1
-    thrustersManeuveringMake: '10× Origin Scalpel Precision, 2× Origin Omni Precision',
-    sheild: 'Gorgon Defender ForceWall',
-    weaponSysC1: '2× Omnisky VI Laser Cannons',
-    weaponSysC2: '1× Klaus Werner Mass Driver Cannon',
-    weaponSysC3: '2x2 Talon Stalker IR',
-    vPrecision: 50, //50 m/s
-    vSCM: 210,
-    vBoost: 630,
-    maxSpeedPitch: 75, //75.0°/s
-    maxSpeedYaw: 75, //75.0°/s
-    maxSpeedRoll: 85,
-    maxAccelPitch: 950, //950°/s²
-    maxAccelYaw: 50,
-    maxAccelRoll: 950, //950°/s²
+    orderFrontView: '../Project-1/assets/325aFrLow.jpg',
+    orderRearView: '../Project-1/assets/325aRear.jpg',
+    equipment: {
+      'Maximum Crew': 1,
+      'Mass': 20085,
+      'Cargo Cpacity': 4,
+      'Length': 24,
+      'Height': 7,
+      'Beam': 16,
+      'Upgrade Capacity': 6,
+      'Hull Material': 'Metal',
+      'Power Plant Size': 3,
+      'Power Plant': 'VHT 2 Plus',
+      'Number of Main Thrusters': 1, //1x TR4
+      'Engine Factory': 'Hammer Propulsion',
+      'Maneuvering Thrusters': 12,  //12 '10× Origin Scalpel Precision, 2× Origin Omni Precision',
+      'Sheild': 'Gorgon Defender ForceWall',
+      'Class 1 Weapons': '2× Omnisky VI Laser Cannons',
+      'Class 2 Weapons': '1× Klaus Werner Mass Driver Cannon',
+      'Class 3 Weapons': '2x2 Talon Stalker IR',
+    },
+    velocity: {
+      vPrecision: 50, //50 m/s
+      vSCM: 210,
+      vBoost: 630,
+    },
+    rotation: {
+      maxSpeedPitch: 75, //75.0°/s
+      maxSpeedYaw: 75, //75.0°/s
+      maxSpeedRoll: 85,
+      maxAccelPitch: 950, //950°/s²
+      maxAccelYaw: 50,
+      maxAccelRoll: 950, //950°/s²
+    },
     modalFlavorTitle: 'UNEQUALLED STRENGTH',
     modalFlavorText: 'It’s a dangerous universe out there. Be the arbiter of your fate with the combat-enhanced ORIGIN 325a. Just because it’s a rough galaxy doesn’t mean you need to sacrifice your comfort: the 325a can come out on top in any dogfight. The 325a features an advanced weapon payload as well as a custom targeting system designed especially for the 325a by WillsOp.'
   },
@@ -135,33 +158,40 @@ var baseShips = [
     sketchFab: 'https://sketchfab.com/models/ac1b0d41f1ff40d18bccb0af0e94216f/embed?autospin=0.2&amp;autostart=1&amp;preload=1;transparent=1;ui_general_controls=0&amp;ui_settings=0&amp;ui_help=0&amp;ui_vr=0&amp;ui_animations=0&amp;ui_annotations=0&amp;ui_infos=0&amp',
     threeDfileLocal: 'https://ucarecdn.com/e213c706-3b8b-4003-b3f5-fdbaa08d74e1/',
     threeDid: 'three50r-obj',
-    maxCrew: 1,
-    mass: 20085,
-    cargo: 0,
-    length: 24,
-    height: 7,
-    beam: 16,
-    upgradeCap: 6,
-    hullMat: 'Metal',
-    pwrPlantSize: 4,
-    pwrPlantFactory: 'VACOM StarHeart IV',
-    thrustersMainNum: 2, //2x TR4
-    engineFactory: 'Hammer Propulsion HM 4.3',
-    thrustersManeuveringNum: 12,  //12x TR1
-    thrustersManeuveringMake: '10× Origin Scalpel Precision, 2× Origin Omni Precision',
-    sheild: 'Gorgon Defender AllStop',
-    weaponSysC1: '2× A&amp;R Omnisky III Laser Cannons',
-    weaponSysC2: 'N/A',
-    weaponSysC3: 'N/A',
-    vPrecision: 70, //70 m/s
-    vSCM: 270,
-    vBoost: 810,
-    maxSpeedPitch: 95, //75.0°/s
-    maxSpeedYaw: 95, //75.0°/s
-    maxSpeedRoll: 105,
-    maxAccelPitch: 950, //950°/s²
-    maxAccelYaw: 50,
-    maxAccelRoll: 950, //950°/s²
+    orderFrontView: '../Project-1/assets/350rFrLow.jpg',
+    orderRearView: '../Project-1/assets/350rRear.jpg',
+    equipment: {
+      'Maximum Crew': 1,
+      'Mass': 20085,
+      'Cargo Cpacity': 0,
+      'Length': 24,
+      'Height': 7,
+      'Beam': 16,
+      'Upgrade Capacity': 6,
+      'Hull Material': 'Metal',
+      'Power Plant Size': 4,
+      'Power Plant': 'VACOM StarHeart IV',
+      'Main Thrustter Count': 2, //2x TR4
+      'Engine Factory': 'Hammer Propulsion HM 4.3',
+      'Maneuvering Thrusterss': 12,  //12 '10× Origin Scalpel Precision, 2× Origin Omni Precision',
+      'Sheild': 'Gorgon Defender AllStop',
+      'Class 1 Weapons': '2× A&amp;R Omnisky III Laser Cannons',
+      'Class 2 Weapons': 'N/A',
+      'Class 3 Weapons': 'N/A',
+    },
+    velocity: {
+      vPrecision: 70, //70 m/s
+      vSCM: 270,
+      vBoost: 810,
+    },
+    rotation : {
+      maxSpeedPitch: 95, //75.0°/s
+      maxSpeedYaw: 95, //75.0°/s
+      maxSpeedRoll: 105,
+      maxAccelPitch: 950, //950°/s²
+      maxAccelYaw: 50,
+      maxAccelRoll: 950, //950°/s²
+    },
     modalFlavorTitle: 'PURE SPEED',
     modalFlavorText: 'Since the dawn of civilization, Humans have striven to build faster machines. Now, ORIGIN presents the culmination of that effort: the ORIGIN 350r. The combination of a Gangleri BP 707 Standard powerplant with a 300i fuselate re-engineered to ac- commodate twin Hammer Propulsion HM 4.3 thrusters makes the 350r the fastest personal craft you’ll ever call your own.'
   },
@@ -239,6 +269,10 @@ function renderShipDetails(ship) {
   var $aframeKeyLight = document.createElement('a-light')
   var $aframeCam = document.createElement('a-entity')
   var $aframeTurntable = document.createElement('a-animation')
+  var $orderButton = document.createElement('button')
+  $orderButton.textContent = 'Request a Quote'
+  $orderButton.dataset.shipId = ship.id
+  $orderButton.classList.add('orderButton')
   // for material -- var $aframeEntity = document.createElement('a-entity')
 
   //var $specs = document.createElement('div')
@@ -266,8 +300,6 @@ function renderShipDetails(ship) {
   });
 */
 
-  // var $addToCart = document.createElement('button')
-
   //----- classes & attributes -----
 
   $ship.classList.add('col-xs-12')
@@ -276,19 +308,20 @@ function renderShipDetails(ship) {
   $name.classList.add('panel-title')
   $name.textContent = ship.name
   $modalFlavorTitle.textContent = ship.modalFlavorTitle
+  $modalFlavorTitle.classList.add('modalFlavorTitle')
   // ------ Video Embed ----
   $vid.classList.add('panel-body', 'embed-responsive', 'embed-responsive-16by9')
   $vidEmbed.setAttribute('src', ship.vidEmbed)
   $vidEmbed.classList.add('embed-responsive-item')
 // -----Body-----
   $body.classList.add('panel-body')
-  $infoCol.classList.add('col-xs-3')
-  $threeDCol.classList.add('col-xs-9')
+  $infoCol.classList.add('col-xs-4')
+  $threeDCol.classList.add('col-xs-8')
   $threeDCol.id = 'myEmbeddedScene'
 
   $aframeAsset.id = ship.threeDid
   $aframe.setAttribute('embedded', 'true')
-  $aframe.setAttribute('style', 'height: 350px; width: 100%')
+  $aframe.setAttribute('style', 'height: 500px; width: 120%')
   $aframe.classList.add('aFrameScene')
 
   $aframeAsset.id = 'threeDAsset'
@@ -349,6 +382,7 @@ function renderShipDetails(ship) {
   $aframe.appendChild($aframeLight)
   $aframe.appendChild($aframeDirLight)
   $aframe.appendChild($aframeKeyLight)
+  $infoCol.appendChild($orderButton)
   // $body.appendChild($addToCart)
 
   $panel.appendChild($body)
@@ -375,6 +409,23 @@ function findRaceShip(raceShip, shipId) {
   }
 }
 
+function renderSpecs(ship) {
+  var $specs = document.createElement('div')
+  var $dataEquipment = document.createElement('dl')
+  $dataEquipment.classList.add('dl-horizontal')
+  $specs.appendChild($dataEquipment)
+  for(var key in ship.equipment) {
+    var $dataTerm = document.createElement('dt')
+    var $dataDesc = document.createElement('dd')
+    $dataTerm.textContent = key
+    $dataDesc.textContent = ship.equipment[key]
+    $dataEquipment.appendChild($dataTerm)
+    $dataEquipment.appendChild($dataDesc)
+  }
+  return $specs
+
+}
+
 function showView($views, viewId) {
   for (var i = 0; i < $views.children.length; i++) {
     var $view = $views.children[i]
@@ -387,12 +438,24 @@ function showView($views, viewId) {
   }
 }
 
+$('#myTabs a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+
+var $requestform = document.querySelector('#request-form')
+
+$requestform.addEventListener('submit', function (event) {
+  event.preventDefault()
+})
+
 function clearViews () {
   document.getElementById('ship-details').innerHTML = ""
 }
 // ----- EVENT LISTENERS -----
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function(event) {
+  event.preventDefault()
   var $baseShips = document.querySelector('#base-ships')
   baseShips.forEach(function(ship) {
     var $ship = baseShip(ship, 4)
@@ -410,11 +473,37 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     var shipId = event.target.getAttribute('data-ship-id')
     var ship = findBaseShip(baseShips, shipId)
-    showView($views, 'ship-details')
     $shipDetails.innerHTML = ''
     $shipDetails.appendChild(renderShipDetails(ship))
+    showView($views, 'ship-details')
   })
 
+  $('#perspectives a').click(function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+  })
+
+  $shipDetails.addEventListener('click', function (event) {
+    if (event.target.tagName !== 'BUTTON') {
+      return
+    }
+    var shipId = event.target.getAttribute('data-ship-id')
+    var ship = findBaseShip(baseShips, shipId)
+    showView($views, 'quote-form')
+    var $specsSwap = document.querySelector('#specifications')
+    $specsSwap.innerHTML = ''
+    $specsSwap.appendChild(renderSpecs(ship))
+
+    var $frontImgSwap = document.getElementById('front')
+    $frontImgSwap.src = ship.orderFrontView
+    var $rearImgSwap = document.querySelector('#rear')
+    $rearImgSwap.src = ship.orderRearView
+
+    var $formRowModel = document.getElementById('formRowModel')
+    $formRowModel.textContent = ship.name
+
+
+  })
 
   $home.addEventListener('click', function (event) {
     showView($views, 'base-ships')

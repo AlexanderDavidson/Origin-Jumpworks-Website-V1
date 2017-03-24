@@ -6,7 +6,7 @@
 
 .cb-slideshow::after {
   content: '';
-  background: transparent url(../images/pattern.png) repeat top left;
+  background: transparent url(../project-1/assets/pattern.png) repeat top left;
 }
 
 .cb-slideshow li span { /* images */
@@ -35,7 +35,7 @@
 }
 
 .cb-slideshow li:nth-child(3) span {
-  background-image: url(../Project-1/assets/speed.jpg);
+  background-image: url(../Project-1/assets/speed.png);
   animation-delay: 12s;
 }
 
@@ -88,7 +88,7 @@
 
 .cb-slideshow li div h3 {
   font-family: 'Josefin Sans', sans-serif;
-  position: absolute;
+  /*position: absolute;*/
   bottom: 0.02em;
   font-size: 240px;
   padding: 0;
@@ -145,22 +145,30 @@ li {
   background-size: cover;
   background-position: 50%;
   color: white;
-  height: 100%;
-  width: 98%;
-  margin: initial;
+  height: 64vh;
+  width: 100%;
+  margin: 0;
 }
 
 .Origin-Name {
   width: 100%;
   padding: 3em;
+  margin-bottom: 8em;
 }
 
 .Origin-History1 {
-  padding: 1em;
+  padding-left: 5em;
+  padding-right: 5em;
 }
 
 .Origin-History2 {
-  padding: 1em;
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+#Hist-Button {
+  margin-left: 5em;
+  margin-top: 2em;
 }
 
 #galactic-tour {
@@ -171,35 +179,76 @@ li {
   width: 100%;
 }
 
+#Hist-Button {
+  padding: 1em;
+}
+
+.well {
+  position: absolute;
+  display: inline;
+  z-index: 10;
+  color: black;
+  width: 200%;
+}
+
+.history-well {
+  position: absolute;
+  display: inline;
+  z-index: 10;
+  color: black;
+  width: 200%;
+}
+
 .GTmodal-title {
   color: black;
 }
 
+#views {
+  padding: 0;
+}
+
 .description {
-  margin-top: 3em;
-  width: 100%;
+  margin-top: 13em;
+  padding: 2em;
+  width: 75%;
 }
 
 .container {
   margin: auto;
 }
 
-.row {
+#originPresents {
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  margin-top: 0.4em;
+  font-size: 60px;
+  padding-top: 4em;
+  text-shadow: black 1px 1px 1px;
+}
+
+#three00series {
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  font-size: 240px;
+  text-shadow: black 1px 1px 1px;
+}
+
+.ship-list {
   left: auto;
   right: auto;
-  padding: 1em;
-  height: calc(42em);
+  padding: 0;
+  height: 74em;
   width: 100%;
+}
+
+.descriptionBase {
+  padding-top: 52em;
+  padding-right: 39em;
+  padding-left: 2em;
 }
 
 .hidden {
   display: none;
-}
-
-.descriptionBase {
-  position: absolute;
-  bottom: 0;
-  margin: 0.5em;
 }
 
 .featured {
@@ -209,6 +258,11 @@ li {
 #threeDAsset {
   position: absolute;
   bottom: 2;
+}
+
+.aFrameScene {
+  width: 150%;
+  height: 150%;
 }
 
 #threeHundredI {
@@ -252,10 +306,10 @@ li {
   background-size: cover;
   background-position: 100% 10%;
   color: white;
-  height: calc(32em);
+  height: 74em;
   width: 100%;
   margin: 0;
-  margin-top: 2%;
+  margin-top: 1.5em;
 }
 
 #raceShip {
@@ -272,20 +326,30 @@ li {
 
 .panel-body {
   color: white;
-  background: rgb(14, 29, 45); /* Old browsers */
-  background: -moz-linear-gradient(top, rgba(14, 29, 45, 1) 0%, rgba(48, 66, 81, 1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(14, 29, 45, 1) 0%, rgba(48, 66, 81, 1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(14, 29, 45, 1) 0%, rgba(48, 66, 81, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid: dximagetransform.microsoft.gradient(startColorstr='#0e1d2d', endColorstr='#304251', GradientType=0); /* IE6-9 */
+  background-color: black;
 }
 
 .panel-heading {
   font-size: x-large;
-  background: rgb(48, 66, 81); /* Old browsers */
-  background: -moz-linear-gradient(top, rgba(48, 66, 81, 1) 0%, rgba(14, 29, 45, 1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(48, 66, 81, 1) 0%, rgba(14, 29, 45, 1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(48, 66, 81, 1) 0%, rgba(14, 29, 45, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid: dximagetransform.microsoft.gradient(startColorstr='#304251', endColorstr='#0e1d2d', GradientType=0); /* IE6-9 */
+  background-color: black;
+}
+
+.modalFlavorTitle {
+  padding: 1em;
+}
+
+.orderButton {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-right: 16em;
+  padding-left: 16em;
+  margin-left: 2em;
+  margin-top: 3em;
+  color: black;
+}
+
+#perspectives {
+  padding: 0;
 }
 
 .specs {
@@ -300,6 +364,88 @@ li {
   background-color: white;
 }
 
+.tab-content img {
+  width: 100%;
+}
+
+#btn-blue-paint {
+  background-image: url(../Project-1/assets/blue-paint.jpg) no-repeat scroll 0 0 transparent;
+  width: 11em;
+  height: 2em;
+}
+
+#btn-silver-paint {
+  background-image: url(../Project-1/assets/silver-paint.jpg) no-repeat scroll 0 0 transparent;
+  width: 11em;
+  height: 2em;
+}
+
+#btn-red-paint {
+  background-image: url(../Project-1/assets/red-paint.jpg) no-repeat scroll 0 0 transparent;
+  width: 11em;
+  height: 2em;
+}
+
+#btn-int-leather {
+  background-image: url(../Project-1/assets/int-leather.jpg) no-repeat scroll 0 0 transparent;
+  width: 11em;
+  height: 2em;
+}
+
+#btn-int-carbon {
+  background-image: url(../Project-1/assets/int-carbon.jpg) no-repeat scroll 0 0 transparent;
+  width: 11em;
+  height: 2em;
+}
+
+#specifications {
+  display: block;
+  padding-left: 10em;
+  padding-top: 7em;
+  padding-bottom: 4em;
+  top: 3em;
+  left: 1em;
+  border: 1px solid black;
+  border-bottom-width: 2em;
+}
+
+.formBottomRow {
+  background-color: black;
+  height: 12em;
+  border: 1px solid white;
+}
+
+.form-col {
+  padding: 2em;
+}
+
+#planetChoice {
+  color: white;
+  margin-left: 2em;
+}
+
+#planetBtn {
+  margin-top: -2.3em;
+  margin-left: 9em;
+}
+
+.btTxt {
+  width: 9em;
+  padding: 0.2em;
+}
+
+#requestBtn {
+  width: 100%;
+  padding: 1em;
+  margin-top: 4em;
+}
+
+#formRowModel {
+  color: white;
+  text-align: center;
+  padding-top: 1.2em;
+}
+
 #after-ships-img {
   position: static;
   color: white;
@@ -308,4 +454,20 @@ li {
   background-size: cover;
   height: 100vh;
   width: 100%;
+}
+
+.Origin-Name-form {
+  width: 13em;
+  margin-top: 3em;
+}
+
+#between-ships-img {
+  position: static;
+  color: white;
+  background-image: url(http://i.imgur.com/5LvQJI2.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 60vh;
+  width: 100%;
+  margin-bottom: 1.5em;
 }
