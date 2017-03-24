@@ -279,6 +279,7 @@ li {
   right: auto;
   color: white;
   margin: 0;
+  border-right: 4px solid white;
 }
 
 #three15p {
@@ -303,6 +304,7 @@ li {
   right: auto;
   color: white;
   margin: 0;
+  border-left: 4px solid white;
 }
 
 #three50r {
