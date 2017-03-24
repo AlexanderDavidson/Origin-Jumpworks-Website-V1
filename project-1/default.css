@@ -1,5 +1,7 @@
 #logoNav {
-  width: 40%;
+  position: absolute;
+  width: 20%;
+  top: -3em;
 }
 
 /* slideshow */
@@ -94,6 +96,7 @@
   padding: 0;
   line-height: 200px;
   text-shadow: black 1px 1px 1px;
+  margin: 0;
 }
 
 @keyframes imageAnimation {
