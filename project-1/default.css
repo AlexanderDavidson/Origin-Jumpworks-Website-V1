@@ -88,7 +88,7 @@
 
 .cb-slideshow li div h3 {
   font-family: 'Josefin Sans', sans-serif;
-  position: absolute;
+  /*position: absolute;*/
   bottom: 0.02em;
   font-size: 240px;
   padding: 0;
@@ -208,14 +208,30 @@ li {
 }
 
 .description {
-  margin-top: 3em;
-  width: 100%;
+  margin-top: 13em;
+  padding: 2em;
+  width: 75%;
 }
 
 .container {
   margin: auto;
 }
 
+#originPresents {
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  margin-top: 0.4em;
+  font-size: 60px;
+  padding-top: 4em;
+  text-shadow: black 1px 1px 1px;
+}
+
+#three00series {
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  font-size: 240px;
+  text-shadow: black 1px 1px 1px;
+}
 
 .ship-list {
   left: auto;
@@ -242,6 +258,11 @@ li {
 #threeDAsset {
   position: absolute;
   bottom: 2;
+}
+
+.aFrameScene {
+  width: 150%;
+  height: 150%;
 }
 
 #threeHundredI {
@@ -305,20 +326,26 @@ li {
 
 .panel-body {
   color: white;
-  background: rgb(14, 29, 45); /* Old browsers */
-  background: -moz-linear-gradient(top, rgba(14, 29, 45, 1) 0%, rgba(48, 66, 81, 1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(14, 29, 45, 1) 0%, rgba(48, 66, 81, 1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(14, 29, 45, 1) 0%, rgba(48, 66, 81, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid: dximagetransform.microsoft.gradient(startColorstr='#0e1d2d', endColorstr='#304251', GradientType=0); /* IE6-9 */
+  background-color: black;
 }
 
 .panel-heading {
   font-size: x-large;
-  background: rgb(48, 66, 81); /* Old browsers */
-  background: -moz-linear-gradient(top, rgba(48, 66, 81, 1) 0%, rgba(14, 29, 45, 1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(48, 66, 81, 1) 0%, rgba(14, 29, 45, 1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(48, 66, 81, 1) 0%, rgba(14, 29, 45, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid: dximagetransform.microsoft.gradient(startColorstr='#304251', endColorstr='#0e1d2d', GradientType=0); /* IE6-9 */
+  background-color: black;
+}
+
+.modalFlavorTitle {
+  padding: 1em;
+}
+
+.orderButton {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-right: 16em;
+  padding-left: 16em;
+  margin-left: 2em;
+  margin-top: 3em;
+  color: black;
 }
 
 .specs {
@@ -341,29 +368,64 @@ li {
 .btn-silver-paint,
 .btn-red-paint,
 .btn-int-leather,
-.btn-int-carbon {
+.btn-int-carbon, {
   width: 11em;
   height: 2em;
 }
 
 .btn-blue-paint {
-  background-image: url(../Project-1/assets/blue-paint.jpg)
+  background-image: url(../Project-1/assets/blue-paint.jpg);
 }
 
 .btn-silver-paint {
-  background-image: url(../Project-1/assets/silver-paint.jpg)
+  background-image: url(../Project-1/assets/silver-paint.jpg);
 }
 
 .btn-red-paint {
-  background-image: url(../Project-1/assets/red-paint.jpg)
+  background-image: url(../Project-1/assets/red-paint.jpg);
 }
 
 .btn-int-leather {
-  background-image: url(../Project-1/assets/int-leather.jpg)
+  background-image: url(../Project-1/assets/int-leather.jpg);
 }
 
 .btn-int-carbon {
-  background-image: url(../Project-1/assets/int-carbon.jpg)
+  background-image: url(../Project-1/assets/int-carbon.jpg);
+}
+
+#specifications {
+  display: block;
+  padding-left: 10em;
+  padding-top: 7em;
+  padding-bottom: 3em;
+  top: 3em;
+  left: 1em;
+  border: 1px solid black;
+  border-bottom-width: 2em;
+}
+
+#formBottomRow {
+  background-color: black;
+  height: 12em;
+}
+
+.form-col {
+  padding: 2em;
+}
+
+#planetChoice {
+  color: white;
+}
+
+#planetBtn {
+  margin-top: -1.3em;
+  margin-left: -2em;
+
+}
+
+.btTxt {
+  width: 13%;
+  padding: 0.2em;
 }
 
 #after-ships-img {
@@ -375,6 +437,7 @@ li {
   height: 100vh;
   width: 100%;
 }
+
 #between-ships-img {
   position: static;
   color: white;

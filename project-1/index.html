@@ -90,7 +90,8 @@
         </div>
       </div>
       <div id="between-ships-img">
-        <h1></h1>
+        <h5 id="originPresents">Origin Jumpworks Presents</h5>
+        <h1 id="three00series">300 SERIES</h1>
       </div>
       <!-- Base Ships -->
       <div class="row ship-list" id="base-ships">
@@ -106,8 +107,8 @@
                 <li role="presentation"><a href="#" data-toggle="tab" data-target="#rear">Rear</a></li>
               </ul>
               <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="front"><img src="../Project-1/assets/350rFrLow.jpg"></div> <!-- change to dynamicall insert with javascript -->
-                <div role="tabpanel" class="tab-pane" id="rear"><img src="../Project-1/assets/350rRear.jpg"></div> <!-- change to dynamicall insert with javascript -->
+                <div role="tabpanel" class="tab-pane active" ><img id="front" src=""></div> <!-- change to dynamicall insert with javascript -->
+                <div role="tabpanel" class="tab-pane" ><img id="rear" src=""></div> <!-- change to dynamicall insert with javascript -->
               </div>
               <div class="btn-group" role="button" id="paint">
                 <button type="button" class="btn btn-blue-paint"></button>
@@ -122,9 +123,9 @@
             <div class="col-xs-4" id="specifications">
             </div>
           </div>
-          <div class="row">
+          <div class="row" id="formBottomRow">
             <form>
-              <div class="col-xs-5">
+              <div class="col-xs-5 form-col">
                   <div class="container-fluid">
                     <div class="row">
                       <div class="col-xs-2">
@@ -159,10 +160,13 @@
                   </div>
               </div>
               <div class="col-xs-4">
-                <button class="btn btn-default">Terra</button>
-                <button class="btn btn-default">Davien I</button>
-                <button class="btn btn-default">Stanton</button>
-                <button class="btn btn-default">Keil</button>
+                <h3 id="planetChoice">Choose Your Planet</h3>
+                <div id="planetBtn">
+                  <input type="image" src="http://www.pngmart.com/files/3/Space-Planet-PNG-Free-Download.png" name="saveForm" class="btTxt submit" id="terra" />
+                  <input type="image" src="http://www.pngmart.com/files/3/Space-Planet-PNG-File.png" name="saveForm" class="btTxt submit" id="davien" />
+                  <input type="image" src="http://www.pngmart.com/files/3/Space-Planet-PNG-Transparent-Image.png" name="saveForm" class="btTxt submit" id="stanton" />
+                  <input type="image" src="http://www.pngmart.com/files/3/Space-Planet-Transparent-Background.png" name="saveForm" class="btTxt submit" id="kiel" />
+                </div>
               </div>
               <div class="col-xs-1">
                 <button class="btn btn-default" type="submit">Request a Quote</button>
