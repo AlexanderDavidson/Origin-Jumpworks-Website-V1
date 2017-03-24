@@ -90,7 +90,6 @@
 
 .cb-slideshow li div h3 {
   font-family: 'Josefin Sans', sans-serif;
-  /*position: absolute;*/
   bottom: 0.02em;
   font-size: 240px;
   padding: 0;
@@ -208,6 +207,8 @@ li {
 
 #views {
   padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .description {
@@ -246,7 +247,7 @@ li {
 
 .descriptionBase {
   padding-top: 52em;
-  padding-right: 39em;
+  padding-right: 24em;
   padding-left: 2em;
 }
 
