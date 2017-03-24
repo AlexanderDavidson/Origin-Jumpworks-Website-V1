@@ -321,14 +321,14 @@ function renderShipDetails(ship) {
 
   $aframeAsset.id = ship.threeDid
   $aframe.setAttribute('embedded', 'true')
-  $aframe.setAttribute('style', 'height: 500px; width: 120%')
+  $aframe.setAttribute('style', 'height: 425px; width: 100%')
   $aframe.classList.add('aFrameScene')
 
   $aframeAsset.id = 'threeDAsset'
   $aframeAsset.setAttribute('src', ship.threeDfileLocal)
   $aframeAsset.setAttribute('material', 'side: double; offset: [object Object]; repeat: [object Object]; ambientOcclusionTextureOffset: [object Object]; ambientOcclusionTextureRepeat: [object Object]; color: white; displacementTextureOffset: [object Object]; displacementTextureRepeat: [object Object]; metalness: 0.9; normalScale: [object Object]; normalTextureOffset: [object Object]; normalTextureRepeat: [object Object]; roughness: 0.63')
   $aframeAsset.setAttribute('position', '0 1 -10')
-  $aframeAsset.setAttribute('rotation', '0 135 30')
+  $aframeAsset.setAttribute('rotation', '0 60 0')
   $aframeAsset.setAttribute('scale', '0.007 0.007 0.007')
   $aframeAsset.setAttribute('visible', 'true')
 
@@ -350,7 +350,7 @@ function renderShipDetails(ship) {
   $aframeCam.setAttribute('position', '0 0 15')
   $aframeTurntable.setAttribute('easing', 'linear')
   $aframeTurntable.setAttribute('attribute', 'rotation')
-  $aframeTurntable.setAttribute('dur', '40000')
+  $aframeTurntable.setAttribute('dur', '90000')
   $aframeTurntable.setAttribute('fill', 'forwards')
   $aframeTurntable.setAttribute('to', '0 360 0')
   $aframeTurntable.setAttribute('repeat', 'indefinite')
