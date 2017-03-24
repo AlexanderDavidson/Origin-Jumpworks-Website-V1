@@ -6,7 +6,7 @@
 
 .cb-slideshow::after {
   content: '';
-  background: transparent url(../images/pattern.png) repeat top left;
+  background: transparent url(../project-1/assets/pattern.png) repeat top left;
 }
 
 .cb-slideshow li span { /* images */
@@ -348,6 +348,10 @@ li {
   color: black;
 }
 
+#perspectives {
+  padding: 0;
+}
+
 .specs {
   background-color: rgba(48, 66, 81, 1);
 }
@@ -364,49 +368,51 @@ li {
   width: 100%;
 }
 
-.btn-blue-paint,
-.btn-silver-paint,
-.btn-red-paint,
-.btn-int-leather,
-.btn-int-carbon, {
+#btn-blue-paint {
+  background-image: url(../Project-1/assets/blue-paint.jpg) no-repeat scroll 0 0 transparent;
   width: 11em;
   height: 2em;
 }
 
-.btn-blue-paint {
-  background-image: url(../Project-1/assets/blue-paint.jpg);
+#btn-silver-paint {
+  background-image: url(../Project-1/assets/silver-paint.jpg) no-repeat scroll 0 0 transparent;
+  width: 11em;
+  height: 2em;
 }
 
-.btn-silver-paint {
-  background-image: url(../Project-1/assets/silver-paint.jpg);
+#btn-red-paint {
+  background-image: url(../Project-1/assets/red-paint.jpg) no-repeat scroll 0 0 transparent;
+  width: 11em;
+  height: 2em;
 }
 
-.btn-red-paint {
-  background-image: url(../Project-1/assets/red-paint.jpg);
+#btn-int-leather {
+  background-image: url(../Project-1/assets/int-leather.jpg) no-repeat scroll 0 0 transparent;
+  width: 11em;
+  height: 2em;
 }
 
-.btn-int-leather {
-  background-image: url(../Project-1/assets/int-leather.jpg);
-}
-
-.btn-int-carbon {
-  background-image: url(../Project-1/assets/int-carbon.jpg);
+#btn-int-carbon {
+  background-image: url(../Project-1/assets/int-carbon.jpg) no-repeat scroll 0 0 transparent;
+  width: 11em;
+  height: 2em;
 }
 
 #specifications {
   display: block;
   padding-left: 10em;
   padding-top: 7em;
-  padding-bottom: 3em;
+  padding-bottom: 4em;
   top: 3em;
   left: 1em;
   border: 1px solid black;
   border-bottom-width: 2em;
 }
 
-#formBottomRow {
+.formBottomRow {
   background-color: black;
   height: 12em;
+  border: 1px solid white;
 }
 
 .form-col {
@@ -415,17 +421,29 @@ li {
 
 #planetChoice {
   color: white;
+  margin-left: 2em;
 }
 
 #planetBtn {
-  margin-top: -1.3em;
-  margin-left: -2em;
-
+  margin-top: -2.3em;
+  margin-left: 9em;
 }
 
 .btTxt {
-  width: 13%;
+  width: 9em;
   padding: 0.2em;
+}
+
+#requestBtn {
+  width: 100%;
+  padding: 1em;
+  margin-top: 4em;
+}
+
+#formRowModel {
+  color: white;
+  text-align: center;
+  padding-top: 1.2em;
 }
 
 #after-ships-img {
@@ -436,6 +454,11 @@ li {
   background-size: cover;
   height: 100vh;
   width: 100%;
+}
+
+.Origin-Name-form {
+  width: 13em;
+  margin-top: 3em;
 }
 
 #between-ships-img {

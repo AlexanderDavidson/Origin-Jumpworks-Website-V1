@@ -15,24 +15,23 @@ var baseShips = [
     orderFrontView: '../Project-1/assets/300iFrLow.jpg',
     orderRearView: '../Project-1/assets/300iRear.jpg',
     equipment: {
-      maxCrew: 1,
-      mass: 20085,
-      cargo: 4,
-      length: 24,
-      height: 7,
-      beam: 16,
-      upgradeCap: 6,
-      hullMat: 'Metal',
-      pwrPlantSize: 3,
-      pwrPlantFactory: 'VACOM StarHeart IV',
-      thrustersMainNum: 1, // 1x TR4
-      engineFactory: 'Hammer Propulsion HE 5.3',
-      thrustersManeuveringNum: 12, //12x TR4
-      thrustersManeuveringMake: '10× Origin Scalpel Precision, 2× Origin Omni Precision',
-      sheild: 'Gorgon Defender AllStop',
-      weaponSysC1: '2× A&amp;R Omnisky VI Laser Cannons',
-      weaponSysC2: 'N/A',
-      weaponSysC3: 'N/A',
+      'Maximum Crew': 1,
+      'Mass': 20085,
+      'Cargo Cpacity': 4,
+      'Length': 24,
+      'Height': 7,
+      'Beam': 16,
+      'Upgrade Capacity': 6,
+      'Hull Material': 'Metal',
+      'Power Plant Size': 3,
+      'Power Plant': 'VACOM StarHeart IV',
+      'Number of Main Thrusters': 1, // 1x TR4
+      'Engine Factory': 'Hammer Propulsion HE 5.3', //12x
+      'Maneuvering Thrusters': '10× Origin Scalpel Precision, 2× Origin Omni Precision',
+      'Sheild': 'Gorgon Defender AllStop',
+      'Class 1 Weapons': '2× A&amp;R Omnisky VI Laser Cannons',
+      'Class 2 Weapons': 'N/A',
+      'Class 3 Weapons': 'N/A',
     },
     velocity: {
       vPrecision: 50,
@@ -66,24 +65,23 @@ var baseShips = [
     orderFrontView: '../Project-1/assets/315pFrLow.jpg',
     orderRearView: '../Project-1/assets/315pRear.jpg',
     equipment: {
-      maxCrew: 1,
-      mass: 20085,
-      cargo: 6,
-      length: 24,
-      height: 7,
-      beam: 16,
-      upgradeCap: 6,
-      hullMat: 'Metal',
-      pwrPlantSize: 4,
-      pwrPlantFactory: 'Alliance Startech K3S-9',
-      thrustersMainNum: 1, //1x TR4
-      engineFactory: 'Dragon Stellar STC Silver',
-      thrustersManeuveringNum: 12, //12x TR1
-      thrustersManeuveringMake: '10× Origin Scalpel Precision, 2× Origin Omni Precision',
-      sheild: 'Gorgon Defender AllStop',
-      weaponSysC1: '2× A&amp;R Omnisky VI Laser Cannons',
-      weaponSysC2: 'Greycat Industrial SureGrip Tractor Beam',
-      weaponSysC3: 'N/A',
+      'Maximum Crew': 1,
+      'Mass': 20085,
+      'Cargo Cpacity': 6,
+      'Length': 24,
+      'Height': 7,
+      'Beam': 16,
+      'Upgrade Capacity': 6,
+      'Hull Material': 'Metal',
+      'Power Plant Size': 4,
+      'Power Plant': 'Alliance Startech K3S-9',
+      'Number of Main Thrusters': 1, //1x TR4
+      'Engine Factory': 'Dragon Stellar STC Silver', //12x
+      'Maneuvering Thrusters': '10× Origin Scalpel Precision, 2× Origin Omni Precision',
+      'Sheild': 'Gorgon Defender AllStop',
+      'Class 1 Weapons': '2× A&amp;R Omnisky VI Laser Cannons',
+      'Class 2 Weapons': 'Greycat Industrial SureGrip Tractor Beam',
+      'Class 3 Weapons': 'N/A',
     },
     velocity: {
       vPrecision: 50,
@@ -115,24 +113,23 @@ var baseShips = [
     orderFrontView: '../Project-1/assets/325aFrLow.jpg',
     orderRearView: '../Project-1/assets/325aRear.jpg',
     equipment: {
-      maxCrew: 1,
-      mass: 20085,
-      cargo: 4,
-      length: 24,
-      height: 7,
-      beam: 16,
-      upgradeCap: 6,
-      hullMat: 'Metal',
-      pwrPlantSize: 3,
-      pwrPlantFactory: 'VHT 2 Plus',
-      thrustersMainNum: 1, //1x TR4
-      engineFactory: 'Hammer Propulsion',
-      thrustersManeuveringNum: 12,  //12x TR1
-      thrustersManeuveringMake: '10× Origin Scalpel Precision, 2× Origin Omni Precision',
-      sheild: 'Gorgon Defender ForceWall',
-      weaponSysC1: '2× Omnisky VI Laser Cannons',
-      weaponSysC2: '1× Klaus Werner Mass Driver Cannon',
-      weaponSysC3: '2x2 Talon Stalker IR',
+      'Maximum Crew': 1,
+      'Mass': 20085,
+      'Cargo Cpacity': 4,
+      'Length': 24,
+      'Height': 7,
+      'Beam': 16,
+      'Upgrade Capacity': 6,
+      'Hull Material': 'Metal',
+      'Power Plant Size': 3,
+      'Power Plant': 'VHT 2 Plus',
+      'Number of Main Thrusters': 1, //1x TR4
+      'Engine Factory': 'Hammer Propulsion',
+      'Maneuvering Thrusters': 12,  //12 '10× Origin Scalpel Precision, 2× Origin Omni Precision',
+      'Sheild': 'Gorgon Defender ForceWall',
+      'Class 1 Weapons': '2× Omnisky VI Laser Cannons',
+      'Class 2 Weapons': '1× Klaus Werner Mass Driver Cannon',
+      'Class 3 Weapons': '2x2 Talon Stalker IR',
     },
     velocity: {
       vPrecision: 50, //50 m/s
@@ -164,24 +161,23 @@ var baseShips = [
     orderFrontView: '../Project-1/assets/350rFrLow.jpg',
     orderRearView: '../Project-1/assets/350rRear.jpg',
     equipment: {
-      maxCrew: 1,
-      mass: 20085,
-      cargo: 0,
-      length: 24,
-      height: 7,
-      beam: 16,
-      upgradeCap: 6,
-      hullMat: 'Metal',
-      pwrPlantSize: 4,
-      pwrPlantFactory: 'VACOM StarHeart IV',
-      thrustersMainNum: 2, //2x TR4
-      engineFactory: 'Hammer Propulsion HM 4.3',
-      thrustersManeuveringNum: 12,  //12x TR1
-      thrustersManeuveringMake: '10× Origin Scalpel Precision, 2× Origin Omni Precision',
-      sheild: 'Gorgon Defender AllStop',
-      weaponSysC1: '2× A&amp;R Omnisky III Laser Cannons',
-      weaponSysC2: 'N/A',
-      weaponSysC3: 'N/A',
+      'Maximum Crew': 1,
+      'Mass': 20085,
+      'Cargo Cpacity': 0,
+      'Length': 24,
+      'Height': 7,
+      'Beam': 16,
+      'Upgrade Capacity': 6,
+      'Hull Material': 'Metal',
+      'Power Plant Size': 4,
+      'Power Plant': 'VACOM StarHeart IV',
+      'Main Thrustter Count': 2, //2x TR4
+      'Engine Factory': 'Hammer Propulsion HM 4.3',
+      'Maneuvering Thrusterss': 12,  //12 '10× Origin Scalpel Precision, 2× Origin Omni Precision',
+      'Sheild': 'Gorgon Defender AllStop',
+      'Class 1 Weapons': '2× A&amp;R Omnisky III Laser Cannons',
+      'Class 2 Weapons': 'N/A',
+      'Class 3 Weapons': 'N/A',
     },
     velocity: {
       vPrecision: 70, //70 m/s
@@ -447,6 +443,11 @@ $('#myTabs a').click(function (e) {
   $(this).tab('show')
 })
 
+var $requestform = document.querySelector('#request-form')
+
+$requestform.addEventListener('submit', function (event) {
+  event.preventDefault()
+})
 
 function clearViews () {
   document.getElementById('ship-details').innerHTML = ""
@@ -497,6 +498,10 @@ document.addEventListener('DOMContentLoaded', function(event) {
     $frontImgSwap.src = ship.orderFrontView
     var $rearImgSwap = document.querySelector('#rear')
     $rearImgSwap.src = ship.orderRearView
+
+    var $formRowModel = document.getElementById('formRowModel')
+    $formRowModel.textContent = ship.name
+
 
   })
 
