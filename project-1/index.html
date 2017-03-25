@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script> -->
     <style>
 			body { margin: 0; }
@@ -19,10 +20,22 @@
     <!-- Temporary Navbar -->
     <nav class="navbar navbar-inverse" id="top-nav" role="navigation">
       <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">
-            <img src="../Project-1/assets/Originlogo-v3.png" alt="Origin Jumpworks" id="logoNav">
-          </a>
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">
+                <img src="../Project-1/assets/Originlogo-v3.png" alt="Origin Jumpworks" id="logoNav">
+              </a>
+            </div>
+          </div>
+          <div class="col-xs-6">
+            <form class="navbar-form navbar-right" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" id="nav-search" placeholder="Discover Your Origin">
+              </div>
+              <button type="submit" class="btn btn-info">Explore</span></button>
+            </form>
+          </div>
         </div>
       </div>
     </nav>
