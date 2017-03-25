@@ -455,7 +455,7 @@ li {
 #after-ships-img {
   position: static;
   color: white;
-  background-image: url(../project-1/assets/300series_brochure_20-2.png);
+  background-image: url(http://arthurgoh.net/starcitizen/explorers_life.jpg);
   background-attachment: fixed;
   background-size: cover;
   height: 100vh;
